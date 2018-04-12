@@ -1,6 +1,6 @@
 <?php
 
-	require("../conectar.bbdd.php");
+	require("../conectar_bbdd.php");
 	
 	$email = $_POST['email'];
 	$password = $_POST['password'];
