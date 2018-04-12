@@ -1,0 +1,141 @@
+.parallax-container {
+  min-height: 380px;
+  line-height: 4;
+  height: auto;
+  color: rgba(8, 10, 102, 0.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.card{
+  background:chocolate;
+  width: 300px;
+  height: 400px;
+  margin-left:10px;
+}
+.card .card-title{
+  background-color: rgba(0,0,0,0.1);
+  width:100%;
+  font-weight:bold;
+}
+
+
+img{
+  height: 200px;
+  width:200px;
+}
+
+p{
+  line-height:14px;
+  font-size: 12px;
+  font-family: 'Arial';
+  color:black;
+}
+
+.social-icon{
+  width: 20px;
+  
+}
+#email{
+  height: 80px;
+  width:700px;
+}
+.input-field{
+  width: 100px;
+}
+
+nav div a {
+  color: #80141c;
+}
+
+a {
+  font-weight: bold;
+  color: #80141c;
+}
+
+a:hover {
+  color:black;
+}
+
+.slider{
+  height: 400px;
+  width:550px;
+  margin:auto;
+}
+
+.pt {
+  padding-top: 20px;
+}
+
+.pl{
+  padding-left: 10px;
+}
+
+h2{
+  font-family: 'Arial';
+  font-size: 24px;
+  text-align:center;
+  color:blue;
+  font-weight: bold;
+  
+  
+}
+.nav-logo{
+  width:70px;
+  height:50px;
+  margin-top: 10px;
+}
+
+.brand-name {
+  position:relative;
+  top:-15px;
+  left:-14px;
+  color: #80141c;
+}
+
+.gastos-envio{
+  height:100px;
+  width:300px;
+
+}
+.portada{
+  height:400px;
+}
+
+h4{
+  font-size:17px;
+  text-align:center;
+}
+.collection{
+  display:flex;
+  flex-direction: row;
+  margin-left:200px;
+}
+h6{
+  text-align: center;
+   
+}
+.bg-caption-text{
+  background-color: rgba(0,0,0,0.3);
+  text-align:center;
+  padding:2px 5px 2px;
+  font-size:2.5em;
+}
+
+
+
+
+
+
