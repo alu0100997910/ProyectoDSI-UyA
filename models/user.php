@@ -13,7 +13,6 @@
         public $avatar;
         public $fechanacimiento;
         //public $fechaalta;
-        public $error;
         
         //Constructor with $db as database connection
         public function __construct($db){
@@ -73,12 +72,8 @@
                 if($this->conn->query($query)){
                     return 1;
                 }
-                $this->error = "El usuario no se ha creado!";
                 return 0;
-            } else {
-                $this->error = "El email introducido ya está registrado!";
-                return 2;
-            }
+            } else return 2;
         }
     }
 ?>
