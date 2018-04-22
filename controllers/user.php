@@ -79,13 +79,11 @@
                 $user=new User($database->getConnection());
                 
                 //query user
-                $user->id = ( isset($_GET['id']) ? $_GET['id'] : null );
+                $user->id =$_GET['id'];
                 $stmt = $user->getUser();
                 $num = $stmt->num_rows;
                 
                 if ($num > 0){
-                    $arr_users=array();
-                    
                     while ($row=mysqli_fetch_assoc($stmt)){
                         extract($row);
                         $user_item=array(
@@ -98,9 +96,8 @@
                             "fechanacimiento" => $fechanacimiento,
                             "fechaalta" => $fecharegistro
                         );
-                        array_push($arr_users, $user_item);
                     }
-                    echo json_encode($arr_users);
+                    echo json_encode($user_item);
                 } else {
                     echo json_encode(
                         array("message" => "User not Found. ")

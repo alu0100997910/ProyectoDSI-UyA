@@ -10,6 +10,7 @@
             $this->connection = null;
             try {
                 $this->connection = new mysqli($this->host,$this->username,$this->password,$this->db_name);
+                $this->connection->set_charset("utf8");
                 
             }catch(mysqli_sql_exception $e){
                 echo "Connection error: " . $e->getMessage();
