@@ -1,0 +1,50 @@
+/*ESTILOS CSS PARA INDEX Y REGISTRO*/
+
+/*GENREAL*/
+.bg{
+	/*background-color: #FFC07F;*/ /*CREMITA*/
+	background: #A5402D;  /*MARRON*/
+	/*background: #721121;*/ /**TINTO*/
+	/*background: #F15156;*/ /*ROSA*/
+
+}
+
+.esp-top-log{
+	margin-top: 20px;
+}
+
+/*FORMULARIO LOGIN*/
+.form-foot{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+	.text-reg{
+		float: left;
+	}
+	.btnformulario{
+		float: right;
+	}
+
+.aregis{
+	color: #000000;
+}
+
+.aregis a {
+	color: #000000;
+}
+
+.aregis a:hover {
+	color: #721121;
+}
+
+
+
+/*.link-white a { color:#fff; }
+.link-white a:hover { color:#fafafa; text-decoration:none; }*/
+
+
+.waves-effect.waves-personal {
+    background-color: rgba(241, 81, 86, .85);   /*ROSA*/
+	/*background-color: rgba(255, 192, 127, 1);*/ /*CREMITA*/
+	/*background-color: rgba(165,64,45,1);*/ /*MARRON*/
+  }

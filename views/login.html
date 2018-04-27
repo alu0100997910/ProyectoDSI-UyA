@@ -1,65 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-</head>
-<body class="green">
-  <div class="container">
-    <div class="col s3  card-panel">
-      
-      <form class="login-form">
-        <div class="row">
-          <div class="input-field col s12 center">
-            <img src="" alt="" class="circle responsive-img valign profile-image-login">
-            <p class="center login-form-text">HOCIKO'S</p>
-          </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s12">
-            <i class="material-icons">person</i>
-            <input id="username" type="text">
-            <label for="username" class="center-align">Username</label>
-          </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s12">
-            <i class="material-icons">lock</i>
-            <input id="password" type="password">
-            <label for="password" class="center-align">Password</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12 m12 l12  login-text">
-            <input type="checkbox" id="remember-me" />
-            <label for="remember-me">Remember me</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <a href="index.html" class="btn waves-effect waves-light col s6">login</a
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s6 m6 l6">
-            <p class="margin medium-small"><a href="page-register.html">Register Now!</a></p>
-          </div>
-          <div class="input-field col s6 m6 l6">
-            <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
-          </div>
-        </div>
-      </form>
+  <title>Login | Hociko's</title>
+  <!-- CSS MATERIALIZE -->  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../public/css/logReg.css">
+  <!-- <link rel="stylesheet" href="css/materialize.min.css">-->
 
-    </div>
-  </div>
-  <!-- jQuery Library -->
-  <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
-  <!--materialize js-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
-</html>
+  <!--  SCRIPTS-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>  
+  <!-- <script src="js/jquery-3.3.1.min.js"></script>-->
+  <!-- <script src="js/materialize.js"></script>-->
+</head>
+<body class="bg">
+  <div class="container">
+
+    <div class="row esp-top-log">
+      <div class="col s4"></div>
+      <div class="col s5 card-panel">
+        <form class="col s12">
+
+          <div class="input-field col s12 center">
+            <img src="../assets/img/Logo2_Icono.png" alt="" class="responsive-img valign profile-image-login">
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">person_outline</i>
+              <input id="" type="text">
+              <label for="usuario">Usuario</label>
+            </div>
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock_outline</i>
+              <input id="" type="password">
+              <label for="password">Contraseña</label>
+            </div>
+          </div>
+
+          <div class="form-foot">
+            <div class="text-reg aregis">
+              <p class="margin medium-small"><a href="registro.html"><strong>¡Registrarme ahora!</strong></a></p>
+            </div>
+
+            <div class="btnformulario">
+              <a href="#!" class="btn waves-effect waves-personal btn-small">INICIAR SESIÓN</a>
+            </div>
+          </div>
+
+          
+
+        </form>
+
+        <!-- <form class="login-form">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">person_outline</i>
+              <input id="username" type="text">
+              <label for="username" class="center-align">Username</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock_outline</i>
+              <input id="password" type="password">
+              <label for="password" class="center-align">Password</label>
+            </div>
+          </div>
+
+          <div class="row">          
+            <div class="input-field col s12">
+              <label>
+                <input type="checkbox" />
+                <span>Remember me</span>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <a href="#!" class="btn waves-effect waves-personal btn-small">LOGIN</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              
+            </div>
+          </form> -->
+
+        </div> <!-- COL 4 CON FORM -->
+
+        <!-- <div class="col s4"></div>    -->     
+      </div> <!-- ROW PRINCIPAL -->
+    </div> <!-- CONTAINER -->
+
+  </body>
+  </html>
