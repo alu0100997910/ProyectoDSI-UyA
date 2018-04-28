@@ -14,6 +14,11 @@
 }
 
 /*FORMULARIO LOGIN*/
+.form-foot-regis{
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
 .form-foot{
 	overflow: hidden;
 	margin-bottom: 10px;
@@ -36,12 +41,6 @@
 .aregis a:hover {
 	color: #721121;
 }
-
-
-
-/*.link-white a { color:#fff; }
-.link-white a:hover { color:#fafafa; text-decoration:none; }*/
-
 
 .waves-effect.waves-personal {
     background-color: rgba(241, 81, 86, .85);   /*ROSA*/
