@@ -22,7 +22,7 @@
                 
                 //query user
                 $product->id =$_GET['id'];
-                $stmt = $product->getUser();
+                $stmt = $product->getProduct();
                 $num = $stmt->num_rows;
                 
                 if ($num > 0){
