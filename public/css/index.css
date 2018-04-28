@@ -1,0 +1,62 @@
+.nav-logo{
+  max-height:34px;
+  margin-top:auto;
+  margin-bottom: auto;
+  margin-left:10px;
+}
+
+.btn{
+  margin: auto; 
+  display: block;
+}
+
+h1{
+  font-size:30px;
+}
+
+h2{
+  font-size:30px;
+}
+
+h3{
+  color:black;
+}
+
+.social-icon{
+  width: 20px;
+}
+
+a{
+  color:black;
+}
+
+a:hover {
+  color:grey;
+  font-weight:bold;
+}
+
+#footer-copyright{
+  text-align: center;
+  font-weight:bold;
+}
+
+/*
+nav, footer {
+  background-color:#f15156 !important;
+}
+*/
+
+body{
+  background-color: #FFCF99;
+}
+
+.form-text{
+  font-weight:bold;
+}
+
+.info-button{
+  margin-top:15px;
+}
+.price-tag{
+  margin-top:5px;
+}
