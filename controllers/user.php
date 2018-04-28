@@ -6,7 +6,7 @@
     $method=$_SERVER['REQUEST_METHOD'];
     
     switch($method){
-        case 'POST':
+        case 'POST':        //Properties
         case 'PUT':
             header("Access-Control-Allow-Origin: *");
             header("Content-Type: application/json; charset=UTF-8");
