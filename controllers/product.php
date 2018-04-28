@@ -15,7 +15,7 @@
             }
             else {
                 $database=new Database();
-                $product=new User($database->getConnection());
+                $product=new Product($database->getConnection());
                 
                 //query user
                 $product->id =$_GET['id'];
