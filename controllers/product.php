@@ -6,15 +6,13 @@
     $method=$_SERVER['REQUEST_METHOD'];
     
     switch($method){
-        case 'POST':
-        case 'PUT':
-        case 'DELETE':
+
         case 'GET':
             header("Access-Control-Allow-Origin: *");
             header("Content-Type: application/json; charset=UTF-8");
             if (!isset($_GET['id'])){
                 header('HTTP/1.1 400 Bad Request');
-                echo json_encode(array("message" => "No se ha especificado usuario"));
+                echo json_encode(array("message" => "No se puede mostrar el producto"));
             }
             else {
                 $database=new Database();
@@ -41,7 +39,7 @@
                     echo json_encode($product_item);
                 } else {
                     echo json_encode(
-                        array("message" => "User not Found. ")
+                        array("message" => "Producto no encontrado ")
                     );
                 }
             }
