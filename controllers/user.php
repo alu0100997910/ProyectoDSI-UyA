@@ -38,11 +38,10 @@
                     $user->lastname=$data->lastname;
                     $user->email=$data->email;
                     $user->password=$data->password;
-                    $user->fechanacimiento=$data->fechanacimiento;
                     switch ($user->createUser()){
                         case 1:
                             header('HTTP/1.1 201 Created');
-                            echo json_encode(array("message" => "El Usuario creado correctamente!"));
+                            echo json_encode(array("message" => "El Usuario se ha registrado correctamente!"));
                             break;
                         case 0:
                             header('HTTP/1.1 500 Internal Server Error');
@@ -52,20 +51,19 @@
                             header('HTTP/1.1 400 Bad Request');
                             echo json_encode(array("message" => "El email ya está registrado!"));
                             break;
+                        case 4:
+                            header('HTTP/1.1 400 Bad Request');
+                            echo json_encode(array("message" => "Falta algún campo de registro"));
+                            break;
                     }
-                    
                 }
-                
             }
             
             else {
                 header('HTTP/1.1 400 Bad Request');
-                echo json_encode(array("message" => "No hay nada que actualizar"));
+                echo json_encode(array("message" => "No se han proporcionado datos"));
             }
             
-            break;
-        case 'DELETE':
-            // Borrar la cuenta de usuario
             break;
         case 'GET':
             header("Access-Control-Allow-Origin: *");
@@ -96,6 +94,7 @@
                             "fechanacimiento" => $fechanacimiento,
                             "fechaalta" => $fecharegistro
                         );
+    
                     }
                     echo json_encode($user_item);
                 } else {

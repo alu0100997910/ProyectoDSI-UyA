@@ -67,9 +67,9 @@
         }
         
         public function createUser(){
-            if($this->name==null || $this->lastname==null || $this->email==null || $this->password==null || $this->fechanacimiento==null) return 0;
+            if($this->name==null || $this->lastname==null || $this->email==null || $this->password==null) return 4;
             if ($this->conn->query("SELECT email from $this->table_name WHERE email='$this->email'")->num_rows == 0){
-                $query = 'INSERT INTO ' . $this->table_name . ' (`id`, `name`, `lastname`, `email`, `password`, `avatar`, `fechanacimiento`, `fecharegistro`) VALUES (NULL, "' . $this->name . '", "'. $this->lastname .'", "' . $this->email . '", "' . $this->password . '", NULL, "' . $this->fechanacimiento . '", CURDATE());';
+                $query = 'INSERT INTO ' . $this->table_name . ' (`id`, `name`, `lastname`, `email`, `password`, `avatar`, `fechanacimiento`, `fecharegistro`) VALUES (NULL, "' . $this->name . '", "'. $this->lastname .'", "' . $this->email . '", "' . $this->password . '", NULL, NULL, CURDATE());';
                 if($this->conn->query($query)){
                     return 1;
                 }
