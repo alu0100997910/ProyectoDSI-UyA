@@ -76,5 +76,10 @@
                 return 0;
             } else return 2;
         }
+        
+        public function loginUser(){
+            $query = 'SELECT id, password FROM ' . $this->table_name .' WHERE email="' . $this->email . '";';
+            return $this->conn->query($query);
+        }
     }
 ?>

@@ -1,6 +1,4 @@
-let error = [];
 $("#registro").submit((e) => {
-    console.log("submit function");
     if ($("#password").val() == $("#passwordconfirm").val()) {
         let params = {
             name: $("#name").val(),

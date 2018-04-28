@@ -98,6 +98,7 @@
                     }
                     echo json_encode($user_item);
                 } else {
+                    header('HTTP/1.1 404 Not Found');
                     echo json_encode(
                         array("message" => "User not Found. ")
                     );

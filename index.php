@@ -14,8 +14,24 @@
 <body class="bg-ffcf99">
   <?php
   session_start();
-  if($_SESSION["logged"]==true){ /* Barra Navegación Logeado*/
-    echo ''; /*<li><a class="brown-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i></a></li>*/
+  if(isset($_SESSION["userid"])){ /* Barra Navegación Logeado*/
+    echo '<nav>
+      <div class="nav-wrapper bg-f15156">
+        <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i></a></li>
+          <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
+          <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+      <li><div class="container"><img class="responsive-img" src="assets/img/logo-navbar.png"></div></li>
+      <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i></a></li>
+      <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
+      <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
+    </ul>'; /**/
   }
   
   else { /*Barra Navegacion Deslogeado*/  

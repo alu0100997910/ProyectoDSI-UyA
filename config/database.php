@@ -17,5 +17,9 @@
             }
             return $this->connection;
         }
+        
+        public function __destruct(){
+            //$this->connection.close();
+        }
     }
 ?>
