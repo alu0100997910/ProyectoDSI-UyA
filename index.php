@@ -11,24 +11,35 @@
   <title>Inicio</title>
 </head>
 
-<body>
+<body class="bg-ffcf99">
+  <?php
+  session_start();
+  if($_SESSION["logged"]==true){ /* Barra Navegación Logeado*/
+    echo ''; /*<li><a class="brown-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i></a></li>*/
+  }
+  
+  else { /*Barra Navegacion Deslogeado*/  
+    echo '
+    <nav>
+      <div class="nav-wrapper bg-f15156">
+        <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i>Registrate</a></li>
+          <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesion</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul id="slide-out" class="sidenav">
+      <li><div class="container"><img class="responsive-img" src="assets/img/logo-navbar.png"></div></li>
+      <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i> Registrate</a></li>
+      <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesion</a></li>
+    </ul>';
+  }
+  
+  ?>
   <!-- BARRA DE NAVEGACION Y MOVIL // bg luci: #ffe082 amber lighten-3 -->
-  <nav>
-    <div class="nav-wrapper #ffe082 amber lighten-3">
-      <a href="/index.html" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
-      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href class="brown-text">Inicia sesion</a></li>
-        <li><a href class="brown-text">Registrate</a></li>
-        <li><a class="brown-text modal-trigger" href="#carrito"><i class="material-icons">shopping_cart</i></a></li>
-      </ul>
-    </div>
-  </nav>
-  <ul id="slide-out" class="sidenav">
-    <li><a href class="brown-text">Inicia sesion</a></li>
-    <li><a href class="brown-text">Registrate</a></li>
-    <li><a class="brown-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i></a></li>
-  </ul>
+  
 
 
   <!-- CONTENIDO -->
@@ -56,11 +67,11 @@
         </div>
         <div class="divider"></div>
         <div class="section">
-          <div class="card #795548 brown">
+          <div class="card bg-721121">
             <div class="card-content white-text">
               <span class="card-title"> Descubre nuestras ofertas!</span>
             </div>
-            <form class=" #ffa726 orange lighten-1 ">
+            <form class="bg-f15156">
               <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
                 <input id="icon_prefix" type="text" class="validate">
@@ -191,11 +202,11 @@
 
   <!-- FOOTER // bg luci: #ffa726 orange lighten-1 -->
   
-  <footer class="page-footer #ffa726 orange lighten-1">
+  <footer class="page-footer bg-a5402d">
     <div class="container">
       <div class="row">
         <div class="col l6 s6">
-          <h2 class="brown-text">Accede a nuestras redes sociales</h2>
+          <h2 class="white-text">Accede a nuestras redes sociales</h2>
           <a href="#">Facebook</a>
           <img class="circle responsive-img social-icon" alt="Logo de facebook" src="assets/img/facebook.png">
           <br>
@@ -204,7 +215,7 @@
           <img class="circle responsive-img social-icon" alt="Logo de twitter" src="assets/img/twitter.jpg">
         </div>
         <div class="col l4 offset-l2 s6">
-          <h2 class="brown-text">Atencion al cliente</h2>
+          <h2 class="white-text">Atencion al cliente</h2>
           <ul>
             <li>
               <a href="#">Contacta con nosotros</a>
@@ -251,6 +262,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script type="text/javascript" src="public/js/materialize-init.js"></script>
+  <script type="text/javascript" src="public/js/index.js"></script>
 </body>
 
 </html>

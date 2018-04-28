@@ -5,6 +5,25 @@
   margin-left:10px;
 }
 
+.bg-721121{
+  background-color:#721121 !important;
+}
+
+.bg-a5402d{
+  background-color:#a5402d !important;
+}
+
+.bg-f15156{
+  background-color: #f15156 !important;
+}
+
+.bg-ffc07f{
+  background-color:#ffc07f !important;
+}
+
+.bg-ffcf99{
+  background-color:#ffcf99 !important;
+}
 .btn{
   margin: auto; 
   display: block;
@@ -27,27 +46,17 @@ h3{
 }
 
 a{
-  color:black;
+  color:#cfe94c;
 }
 
 a:hover {
-  color:grey;
+  color:black;
   font-weight:bold;
 }
 
 #footer-copyright{
   text-align: center;
   font-weight:bold;
-}
-
-/*
-nav, footer {
-  background-color:#f15156 !important;
-}
-*/
-
-body{
-  background-color: #FFCF99;
 }
 
 .form-text{
