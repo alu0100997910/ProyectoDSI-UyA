@@ -20,6 +20,7 @@ $("#registro").submit((e) => {
                 </div>
                 `;
                 $("#ajaxres").html(alerta).removeAttr("hidden");
+                window.location.replace("/index.php");
             },
             error: (res) => {
                 console.log(res);

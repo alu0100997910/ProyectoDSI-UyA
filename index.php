@@ -20,7 +20,7 @@
         <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i></a></li>
+          <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i> Carrito</a></li>
           <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
           <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
         </ul>
@@ -28,7 +28,7 @@
     </nav>
     <ul id="slide-out" class="sidenav">
       <li><div class="container"><img class="responsive-img" src="assets/img/logo-navbar.png"></div></li>
-      <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i></a></li>
+      <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i> Carrito</a></li>
       <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
       <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
     </ul>'; /**/
@@ -195,19 +195,19 @@
                 </div>
               </div>
             </div>
-
-            <div class="center-align">
-              <ul class="pagination">
-                <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li class="waves-effect"><a href="#">2</a></li>
-                <li class="waves-effect"><a href="#">3</a></li>
-                <li class="waves-effect"><a href="#">4</a></li>
-                <li class="waves-effect"><a href="#">5</a></li>
-                <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
-              </ul>
+            <div class="col s12">
+              <div class="center-align">
+                <ul class="pagination">
+                  <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li class="waves-effect"><a href="#">2</a></li>
+                  <li class="waves-effect"><a href="#">3</a></li>
+                  <li class="waves-effect"><a href="#">4</a></li>
+                  <li class="waves-effect"><a href="#">5</a></li>
+                  <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                </ul>
+              </div>
             </div>
-
           </div>
         </div>
 
