@@ -18,7 +18,7 @@
                 if($num==1){
                     $row=mysqli_fetch_assoc($stmt);
                     extract($row);
-                    if($password == $data->password){
+                    if($password == hash('sha256',$data->password)){
                         session_start();
                         $_SESSION["userid"]=$id;
                         echo json_encode(array("message"=>"Usuario identificado correctamente!"));

@@ -1,40 +1,37 @@
 /*ESTILOS CSS PARA INDEX Y REGISTRO*/
 
 /*GENREAL*/
-.bg{
-	/*background-color: #FFC07F;*/ /*CREMITA*/
-	background: #A5402D;  /*MARRON*/
-	/*background: #721121;*/ /**TINTO*/
-	/*background: #F15156;*/ /*ROSA*/
 
+.bg {
+	/*background-color: #FFC07F;*/
+	/*CREMITA*/
+	background: #A5402D;
+	/*MARRON*/
+	/*background: #721121;*/
+	/**TINTO*/
+	/*background: #F15156;*/
+	/*ROSA*/
 }
 
-.esp-top-log{
+.esp-top-log {
 	margin-top: 20px;
 }
 
 /*FORMULARIO LOGIN*/
-.form-foot-regis{
+
+.form-foot-regis {
 	overflow: hidden;
 	margin-bottom: 25px;
 }
 
-.form-foot{
+.form-foot {
 	overflow: hidden;
 	margin-bottom: 10px;
 }
-	.text-reg{
-		float: left;
-	}
-	.btnformulario{
-		float: right;
-	}
-
-.aregis{
-	color: #000000;
-}
 
 .aregis a {
+	margin-top:10px;
+	display:block;
 	color: #000000;
 }
 
@@ -43,11 +40,14 @@
 }
 
 .waves-effect.waves-personal {
-    background-color: rgba(241, 81, 86, .85);   /*ROSA*/
-	/*background-color: rgba(255, 192, 127, 1);*/ /*CREMITA*/
-	/*background-color: rgba(165,64,45,1);*/ /*MARRON*/
-  }
-  
-  h1{
-  	font-size:40px;
-  }
+	background-color: rgba(241, 81, 86, .85);
+	/*ROSA*/
+	/*background-color: rgba(255, 192, 127, 1);*/
+	/*CREMITA*/
+	/*background-color: rgba(165,64,45,1);*/
+	/*MARRON*/
+}
+
+h1 {
+	font-size: 40px;
+}

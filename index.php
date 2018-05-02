@@ -20,7 +20,7 @@
         <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i> Carrito</a></li>
+          <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
           <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
           <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
         </ul>
@@ -28,7 +28,7 @@
     </nav>
     <ul id="slide-out" class="sidenav">
       <li><div class="container"><img class="responsive-img" src="assets/img/logo-navbar.png"></div></li>
-      <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons">shopping_cart</i> Carrito</a></li>
+      <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
       <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
       <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
     </ul>'; /**/
@@ -47,7 +47,7 @@
       </div>
     </nav>
     <ul id="slide-out" class="sidenav">
-      <li><div class="container"><img class="responsive-img" src="assets/img/logo-navbar.png"></div></li>
+      <li><div class="container"><img class="responsive-img" alt="logo de hocikos" src="assets/img/logo-navbar.png"></div></li>
       <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i> Registrate</a></li>
       <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesion</a></li>
     </ul>';
@@ -90,13 +90,13 @@
             <form class="bg-f15156">
               <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix" data-error="wrong" data-success="right" class="form-text black-text">Nombre, usuario o telefono</label>
+                <input id="name" name="name" type="text" class="validate">
+                <label for="name" data-error="wrong" data-success="right" class="form-text black-text">Nombre, usuario o telefono</label>
               </div>
               <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
-                <input id="icon_prefix" type="email" class="validate">
-                <label for="icon_prefix" class="form-text black-text">Correo electrónico</label>
+                <input id="email" type="email" name="email" class="validate">
+                <label for="email" class="form-text black-text">Correo electrónico</label>
               </div>
               <button class="btn waves-effect waves-light #424242 grey darken-3" name="action">Suscribirse</button>
             </form>
@@ -249,7 +249,7 @@
         </div>
       </div>
     </div>
-    <div id="footer-copyright" class="black-text">
+    <div id="footer-copyright" class="white-text">
       © 2018 HOCIKO'S.com Todos los derechos reservados Política de privacidad Política de cookies Condiciones de uso
     </div>
   </footer>

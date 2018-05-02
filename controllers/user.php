@@ -22,7 +22,7 @@
                     $user->id=$data->id;
                     $user->name=$data->name;
                     $user->lastname=$data->lastname;
-                    $user->password=$data->password;
+                    $user->password=hash('sha256',$data->password);
                     //$user->avatar=;
                     $user->fechanacimiento=$data->fechanacimiento;
                     if($user->updateUser()){
@@ -37,7 +37,7 @@
                     $user->name=$data->name;
                     $user->lastname=$data->lastname;
                     $user->email=$data->email;
-                    $user->password=$data->password;
+                    $user->password=hash('sha256',$data->password);
                     switch ($user->createUser()){
                         case 1:
                             header('HTTP/1.1 201 Created');
