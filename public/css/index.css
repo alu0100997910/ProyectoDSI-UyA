@@ -63,8 +63,11 @@ a:hover {
   font-weight:bold;
 }
 
-.info-button{
+.mt-15{
   margin-top:15px;
+}
+.pb-15{
+  padding-bottom:15px;
 }
 .price-tag{
   margin-top:5px;

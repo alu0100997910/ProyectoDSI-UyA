@@ -12,7 +12,6 @@
         public $password;
         public $avatar;
         public $fechanacimiento;
-        //public $fechaalta;
         
         //Constructor with $db as database connection
         public function __construct($db){
@@ -39,7 +38,6 @@
                 } else $query=$query . ', `lastname`="'. $this->lastname . '"';
             }
                 
-                
             if($this->password != null){
                 if($first){
                     $query=$query . '`password`="'. $this->password . '"';
@@ -47,9 +45,11 @@
                 } else $query=$query . ', `password`="'. $this->password . '"';
             }
                 
-            
-            //if($this->avatar !=null)
-            //    $query=$query . ', `avatar`="'. $this->avatar .'"';
+            if($this->avatar !=null){
+                if($first){
+                    $query=$query . '`avatar`="' . $this->avatar . '"';
+                } else $query=$query . ', `avatar`="' . $this->avatar . '"';
+            }
             
             if($this->fechanacimiento != null){
                 if($first){

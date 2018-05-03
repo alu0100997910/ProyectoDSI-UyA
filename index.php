@@ -27,7 +27,7 @@
       </div>
     </nav>
     <ul id="slide-out" class="sidenav">
-      <li><div class="container"><img class="responsive-img" src="assets/img/logo-navbar.png"></div></li>
+      <li><div class="container"><img class="responsive-img mt-15" src="assets/img/logo-navbar.png"></div></li>
       <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
       <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
       <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
@@ -47,16 +47,13 @@
       </div>
     </nav>
     <ul id="slide-out" class="sidenav">
-      <li><div class="container"><img class="responsive-img" alt="logo de hocikos" src="assets/img/logo-navbar.png"></div></li>
+      <li><div class="container"><img class="responsive-img mt-15" alt="logo de hocikos" src="assets/img/logo-navbar.png"></div></li>
       <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i> Registrate</a></li>
       <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesion</a></li>
     </ul>';
   }
   
   ?>
-  <!-- BARRA DE NAVEGACION Y MOVIL // bg luci: #ffe082 amber lighten-3 -->
-  
-
 
   <!-- CONTENIDO -->
   <div class="container">
@@ -87,7 +84,7 @@
             <div class="card-content white-text">
               <span class="card-title"> Descubre nuestras ofertas!</span>
             </div>
-            <form class="bg-f15156">
+            <form id="boletin" class="bg-f15156 pb-15">
               <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
                 <input id="name" name="name" type="text" class="validate">
@@ -98,7 +95,7 @@
                 <input id="email" type="email" name="email" class="validate">
                 <label for="email" class="form-text black-text">Correo electrónico</label>
               </div>
-              <button class="btn waves-effect waves-light #424242 grey darken-3" name="action">Suscribirse</button>
+              <button class="btn waves-effect waves-light #424242 grey darken-3" type="submit">Suscribirse</button>
             </form>
           </div>
         </div>
@@ -149,7 +146,7 @@
                 <div class="card-content">
                   <span class="card-title">Card Title <span class="new badge blue price-tag" data-badge-caption="€">1200</span></span>
                   <p class="truncate">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                  <div class="center-align info-button">
+                  <div class="center-align mt-15">
                     <a class="waves-effect waves-light btn-small blue"><i class="material-icons right">info</i>Info</a>
                   </div>
 
@@ -167,7 +164,7 @@
                 <div class="card-content">
                   <span class="card-title">Card Title <span class="new badge blue price-tag" data-badge-caption="€">1200</span></span>
                   <p class="truncate">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                  <div class="center-align info-button">
+                  <div class="center-align mt-15">
                     <a class="waves-effect waves-light btn-small blue"><i class="material-icons right">info</i>Info</a>
                   </div>
 
@@ -185,7 +182,7 @@
                 <div class="card-content">
                   <span class="card-title">Card Title <span class="new badge blue price-tag" data-badge-caption="€">1200</span></span>
                   <p class="truncate">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                  <div class="center-align info-button">
+                  <div class="center-align mt-15">
                     <a class="waves-effect waves-light btn-small blue"><i class="material-icons right">info</i>Info</a>
                   </div>
 
@@ -210,8 +207,6 @@
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
