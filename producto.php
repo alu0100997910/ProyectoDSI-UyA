@@ -1,3 +1,30 @@
+<?php
+    if(!(isset($_GET['id']) && $_GET['id']!=null)){
+        header('Location: /404.html');
+    } else {
+        include_once "config/database.php";
+        include_once "models/product.php";
+        
+        $db = new Database();
+        $product = new Product($db->getConnection());
+        $product->id = $_GET['id'];
+        $stmt = $product->getProduct();
+        $num = $stmt->num_rows;
+        
+        if($num > 0){
+            $row=mysqli_fetch_assoc($stmt);
+            extract($row);
+        }
+        
+        
+        
+        else {
+            header('Location: /404.html');
+        }
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -60,11 +87,11 @@
         <div class="container">
             <div class="row hide-on-large-only center-align">
                 <div id="product-image" class="col s7 m6 push-s2 push-m3">
-                    <img class="materialboxed responsive-img" src="/assets/img/champu.jpeg">
+                    <img class="materialboxed responsive-img" src=<?php echo "/assets/products/$img"; ?>>
                 </div>
                 <div class="col s12 l7">
                     <div class="collection">
-                        <h1 class="collection-item flow-text">Product Title<span class="new badge blue" data-badge-caption="€">1200</span></h1>
+                        <h1 class="collection-item flow-text"><?php echo $name; ?><span class="new badge blue" data-badge-caption="€"><?php echo $price; ?></span></h1>
                     </div>
 
                     <div class="divider"></div>
@@ -79,9 +106,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td id="modelo">Ipad Pro 10''</td>
-                                    <td id="descripcion">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. <br> Donec id elit non mi porta gravida at eget metus.</td>
-                                    <td id="stock">4</td>
+                                    <td><?php echo $modelo; ?></td>
+                                    <td><?php echo $desc; ?></td>
+                                    <td><?php echo $stock; ?></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -96,11 +123,11 @@
 
             <div class="row hide-on-med-and-down valign-wrapper">
                 <div id="product-image" class="col l6">
-                    <img class="materialboxed responsive-img" src="/assets/img/champu.jpeg">
+                    <img class="materialboxed responsive-img" src=<?php echo "/assets/products/$img"; ?>>
                 </div>
                 <div class="col s12 l6">
                     <div class="collection">
-                        <h1 class="collection-item flow-text">Product Title <span class="new badge blue" data-badge-caption="€">1200</span></h1>
+                        <h1 class="collection-item flow-text"><?php echo $name; ?><span class="new badge blue" data-badge-caption="€"><?php echo "$price"; ?></span></h1>
                     </div>
                     <div class="divider"></div>
                     <div class="row">
@@ -114,11 +141,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Ipad Pro 10''</td>
-                                    <td>
-                                        <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. <br> Donec id elit non mi porta gravida at eget metus.</p>
-                                    </td>
-                                    <td>4</td>
+                                    <td><?php echo $modelo; ?></td>
+                                    <td><?php echo $desc; ?></td>
+                                    <td><?php echo $stock; ?></td>
                                 </tr>
                             </tbody>
                         </table>

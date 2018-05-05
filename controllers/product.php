@@ -29,8 +29,9 @@
                             "id" => $id,
                             "name" => $name,
                             "desc" => $desc,
+                            "alt" => $alt,
                             "price" => $price,
-                            "url" => $url,
+                            "img" => $img,
                             "stock" => $stock,
 
                         );

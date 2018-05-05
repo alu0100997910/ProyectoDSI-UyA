@@ -10,7 +10,8 @@
         public $desc;
         public $price;
         public $stock;
-        public $url;
+        public $img;
+        public $alt;
         
         //Constructor with $db as database connection
         public function __construct($db){
@@ -18,7 +19,7 @@
         }
         
         public function getProduct(){
-            $query = 'SELECT * FROM ' . $this->table_name . ' WHERE id="' . $this->id . '";';
+            $query = 'SELECT * FROM ' . $this->table . ' WHERE id="' . $this->id . '";';
             return $this->conn->query($query);
         }
     
