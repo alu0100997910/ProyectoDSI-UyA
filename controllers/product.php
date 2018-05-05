@@ -46,7 +46,7 @@
             break;
         default:
             header('HTTP/1.1 405 Method not allowed');
-            header('Allow: GET, POST, PUT, DELETE');
+            header('Allow: GET');
         break;
 }
     
