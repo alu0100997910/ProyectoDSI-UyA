@@ -104,8 +104,6 @@
                     );
                 }
             }
-            
-            
             break;
         default:
             header('HTTP/1.1 405 Method not allowed');
