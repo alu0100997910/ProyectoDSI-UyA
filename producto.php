@@ -16,8 +16,6 @@
             extract($row);
         }
         
-        
-        
         else {
             header('Location: /404.html');
         }
@@ -39,7 +37,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-ffcf99">
     <header>
         <!-- NAVBAR -->
         <?php
@@ -86,12 +84,12 @@
     <main class="valign-wrapper">
         <div class="container">
             <div class="row hide-on-large-only center-align">
-                <div id="product-image" class="col s7 m6 push-s2 push-m3">
-                    <img class="materialboxed responsive-img" src=<?php echo "/assets/products/$img"; ?>>
+                <div id="product-image" class="col s7 m6 push-s2 push-m3 mt-15">
+                    <img class="materialboxed responsive-img" src="<?php echo "/assets/products/$img"; ?>" alt="<?php echo $alt; ?>">
                 </div>
                 <div class="col s12 l7">
                     <div class="collection">
-                        <h1 class="collection-item flow-text"><?php echo $name; ?><span class="new badge blue" data-badge-caption="€"><?php echo $price; ?></span></h1>
+                        <h1 class="collection-item flow-text bg-ffcf99"><?php echo $name; ?><span class="new badge blue" data-badge-caption="€"><?php echo $price; ?></span></h1>
                     </div>
 
                     <div class="divider"></div>
@@ -123,11 +121,11 @@
 
             <div class="row hide-on-med-and-down valign-wrapper">
                 <div id="product-image" class="col l6">
-                    <img class="materialboxed responsive-img" src=<?php echo "/assets/products/$img"; ?>>
+                    <img class="materialboxed responsive-img" src="<?php echo "/assets/products/$img"; ?>" alt="<?php echo $alt; ?>">
                 </div>
                 <div class="col s12 l6">
                     <div class="collection">
-                        <h1 class="collection-item flow-text"><?php echo $name; ?><span class="new badge blue" data-badge-caption="€"><?php echo "$price"; ?></span></h1>
+                        <h1 class="collection-item flow-text bg-ffcf99"><?php echo $name; ?><span class="new badge blue" data-badge-caption="€"><?php echo "$price"; ?></span></h1>
                     </div>
                     <div class="divider"></div>
                     <div class="row">
