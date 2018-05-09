@@ -54,6 +54,16 @@ a:hover {
   font-weight:bold;
 }
 
+li.collection-item{
+  cursor: pointer;
+}
+
+.active{
+  color:white !important;
+  background-color:#721121 !important;
+  font-weight:bold;
+}
+
 #footer-copyright{
   text-align: center;
   font-weight:bold;

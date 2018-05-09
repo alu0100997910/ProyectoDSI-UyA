@@ -11,7 +11,7 @@
   <title>Inicio | Hociko's</title>
 </head>
 
-<body class="bg-ffcf99">
+<body class="bg-ffc07f">
   <header>
     <?php
     session_start();
@@ -64,22 +64,24 @@
         <div class="col s12 m4">
           <div class="section">
             <h1>Categorias:</h1>
-            <div class="collection">
-              <a href="#" class="collection-item center-align #fff8e1 amber lighten-5 black-text active"></span>Alimentos</a>
-              <a href="#" class="collection-item center-align #fff8e1 amber lighten-5 black-text"></span>Juguetes y accesorios</a>
-              <a href="#" class="collection-item center-align #fff8e1 amber lighten-5 black-text"></span>Casetas</a>
-              <a href="#" class="collection-item center-align #fff8e1 amber lighten-5 black-text"></span>Baño</a>
-            </div>
+            <ul id="category" class="collection center-align">
+              <li class="collection-item black-text active" value=0>Todos</li>
+              <li class="collection-item black-text" value=1>Alimentos</li>
+              <li class="collection-item black-text" value=2>Juguetes y accesorios</li>
+              <li class="collection-item black-text" value=3>Casetas</li>
+              <li class="collection-item black-text" value=4>Baño</li>
+            </ul>
           </div>
           <div class="divider"></div>
           <div class="section">
             <h1>Precio:</h1>
-            <div class="collection">
-              <a href="#" class="collection-item center-align #fff8e1 amber lighten-5 black-text active"></span>5 - 20 €</a>
-              <a href="#" class="collection-item center-align #fff8e1 amber lighten-5 black-text"></span>20 - 40 €</a>
-              <a href="#" class="collection-item center-align #fff8e1 amber lighten-5 black-text"></span>40 - 60 €</a>
-              <a href="#" class="collection-item center-align #fff8e1 amber lighten-5 black-text"></span>60 - 80 €</a>
-            </div>
+            <ul id="price" class="collection center-align">
+              <li class="collection-item black-text active" value=0>Todos</li>
+              <li class="collection-item black-text" value=1>5 - 20 €</li>
+              <li class="collection-item black-text" value=2>20 - 40 €</li>
+              <li class="collection-item black-text" value=3>40 - 60 €</li>
+              <li class="collection-item black-text" value=4>60 - 80 €</li>
+            </ul>
           </div>
           <div class="divider"></div>
           <div class="section">
@@ -139,72 +141,16 @@
           </div>
           <div class="row">
             <div class="divider"></div>
+            <div class="section" id="product-list">
+              
+              
+              
+            </div>
             <div class="section">
-              <h1>Productos:</h1>
-              <div class="col s12 m6 l4">
-                <div class="card #fff8e1 amber lighten-5">
-                  <div class="card-image ">
-                    <img src="ipad.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title">Card Title <span class="new badge blue price-tag" data-badge-caption="€">1200</span></span>
-                    <p class="truncate">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                    <div class="center-align mt-15">
-                      <a class="waves-effect waves-light btn-small blue"><i class="material-icons right">info</i>Info</a>
-                    </div>
-  
-                  </div>
-                  <div class="card-action center-align">
-                    <a onClick="add(this)" class="waves-effect waves-light btn-small red"><i class="material-icons right">add_shopping_cart</i>Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card #fff8e1 amber lighten-5">
-                  <div class="card-image">
-                    <img src="ipad.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title">Card Title <span class="new badge blue price-tag" data-badge-caption="€">1200</span></span>
-                    <p class="truncate">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                    <div class="center-align mt-15">
-                      <a class="waves-effect waves-light btn-small blue"><i class="material-icons right">info</i>Info</a>
-                    </div>
-  
-                  </div>
-                  <div class="card-action center-align">
-                    <a onClick="add(this)" class="waves-effect waves-light btn-small red"><i class="material-icons right">add_shopping_cart</i>Add To Cart</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col s12 m6 l4">
-                <div class="card #fff8e1 amber lighten-5">
-                  <div class="card-image">
-                    <img src="ipad.jpg">
-                  </div>
-                  <div class="card-content">
-                    <span class="card-title">Card Title <span class="new badge blue price-tag" data-badge-caption="€">1200</span></span>
-                    <p class="truncate">I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                    <div class="center-align mt-15">
-                      <a class="waves-effect waves-light btn-small blue"><i class="material-icons right">info</i>Info</a>
-                    </div>
-  
-                  </div>
-                  <div class="card-action center-align">
-                    <a onClick="add(this)" class="waves-effect waves-light btn-small red"><i class="material-icons right">add_shopping_cart</i>Add To Cart</a>
-                  </div>
-                </div>
-              </div>
               <div class="col s12">
                 <div class="center-align">
                   <ul class="pagination">
-                    <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li class="waves-effect"><a href="#">2</a></li>
-                    <li class="waves-effect"><a href="#">3</a></li>
-                    <li class="waves-effect"><a href="#">4</a></li>
-                    <li class="waves-effect"><a href="#">5</a></li>
-                    <li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+                    
                   </ul>
                 </div>
               </div>
