@@ -19,11 +19,11 @@
                 $user=new User($database->getConnection());
                 
                 if($method == 'PUT') {
-                    $user->id=$data->id;
+                    session_start();
+                    $user->id=$_SESSION['userid'];
                     $user->name=$data->name;
                     $user->lastname=$data->lastname;
                     $user->password=hash('sha256',$data->password);
-                    //$user->avatar=;
                     $user->fechanacimiento=$data->fechanacimiento;
                     if($user->updateUser()){
                         header('HTTP/1.1 201 Created');
@@ -82,20 +82,18 @@
                 $num = $stmt->num_rows;
                 
                 if ($num > 0){
-                    while ($row=mysqli_fetch_assoc($stmt)){
-                        extract($row);
-                        $user_item=array(
-                            "id" => $id,
-                            "name" => $name,
-                            "lastname" => $lastname,
-                            "email" => $email,
-                            "password" => $password,
-                            "avatar" => $avatar,
-                            "fechanacimiento" => $fechanacimiento,
-                            "fechaalta" => $fecharegistro
-                        );
-    
-                    }
+                    $row=mysqli_fetch_assoc($stmt);
+                    extract($row);
+                    $user_item=array(
+                        "id" => $id,
+                        "name" => $name,
+                        "lastname" => $lastname,
+                        "email" => $email,
+                        "password" => $password,
+                        "avatar" => $avatar,
+                        "fechanacimiento" => $fechanacimiento,
+                        "fechaalta" => $fecharegistro
+                    );
                     echo json_encode($user_item);
                 } else {
                     header('HTTP/1.1 404 Not Found');
@@ -104,6 +102,8 @@
                     );
                 }
             }
+            
+            
             break;
         default:
             header('HTTP/1.1 405 Method not allowed');

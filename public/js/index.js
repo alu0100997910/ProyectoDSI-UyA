@@ -26,7 +26,7 @@ function pagination(numpages){
         texto+= `<li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>`;
     }
     $(".pagination").html(texto);
-    $(`.pagination li button[value="${page}"]`).addClass('active');
+    $(`.pagination li button[value="${page}"]`).addClass('selected');
     $(".pagination li button").click(function() {
         page=$(this).val();
         filter();
@@ -64,7 +64,6 @@ function filter(){
                 `;
             }
             $("#product-list").html(texto);
-            console.log(numpages);
             pagination(numpages);
         },
         error: (res) => {
@@ -74,15 +73,15 @@ function filter(){
 }
 
 $("#category .collection-item").click(function(){
-    $("#category .collection-item.active").removeClass("active");
-    $(this).addClass("active");
+    $("#category .collection-item.selected").removeClass("selected");
+    $(this).addClass("selected");
     categoria=$(this).val();
     filter();
 });
 
 $("#price .collection-item").click(function(){
-    $("#price .collection-item.active").removeClass("active");
-    $(this).addClass("active");
+    $("#price .collection-item.selected").removeClass("selected");
+    $(this).addClass("selected");
     price=$(this).val();
     filter();
 });

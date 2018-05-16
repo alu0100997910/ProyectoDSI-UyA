@@ -29,10 +29,10 @@
                     $user->avatar = $file_name . '.' . $file_extension;
                     if($user->updateUser()){
                         if(file_exists($file_dest))
-                            echo json_encode(array("message"=>"El avatar se ha subido correctamente"));
+                            echo json_encode(array("message"=>"El avatar se ha subido correctamente", "img"=>$user->avatar));
                         else{
                             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $file_dest))
-                                echo json_encode(array("message"=>"El avatar se ha subido correctamente"));
+                                echo json_encode(array("message"=>"El avatar se ha subido correctamente", "img"=>$user->avatar));
                             else {
                                 header('HTTP/1.1 500 Internal Server Error');
                                 echo json_encode(array("message"=>"El avatar no se ha subido"));

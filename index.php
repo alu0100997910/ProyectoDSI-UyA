@@ -22,7 +22,7 @@
           <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
-            <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
+            <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
             <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
           </ul>
         </div>
@@ -30,7 +30,7 @@
       <ul id="slide-out" class="sidenav">
         <li><div class="container"><img class="responsive-img mt-15" src="assets/img/logo-navbar.png"></div></li>
         <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
-        <li><a href="#" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
+        <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
         <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
       </ul>'; /**/
     }
@@ -65,7 +65,7 @@
           <div class="section">
             <h1>Categorias:</h1>
             <ul id="category" class="collection center-align">
-              <li class="collection-item black-text active" value=0>Todos</li>
+              <li class="collection-item black-text selected" value=0>Todos</li>
               <li class="collection-item black-text" value=1>Alimentos</li>
               <li class="collection-item black-text" value=2>Juguetes y accesorios</li>
               <li class="collection-item black-text" value=3>Casetas</li>
@@ -76,7 +76,7 @@
           <div class="section">
             <h1>Precio:</h1>
             <ul id="price" class="collection center-align">
-              <li class="collection-item black-text active" value=0>Todos</li>
+              <li class="collection-item black-text selected" value=0>Todos</li>
               <li class="collection-item black-text" value=1>5 - 20 €</li>
               <li class="collection-item black-text" value=2>20 - 40 €</li>
               <li class="collection-item black-text" value=3>40 - 60 €</li>

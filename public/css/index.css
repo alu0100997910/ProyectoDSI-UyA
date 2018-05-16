@@ -58,7 +58,7 @@ li.collection-item{
   cursor: pointer;
 }
 
-.active{
+.selected{
   color:white !important;
   background-color:#721121 !important;
   font-weight:bold;
@@ -77,10 +77,14 @@ li.collection-item{
   margin-top:15px;
 }
 .pb-15{
-  padding-bottom:15px;
+  padding-bottom:15px !important;
 }
 .price-tag{
   margin-top:5px;
+}
+
+#avatarpic{
+  width: 100px;
 }
 
 body {
