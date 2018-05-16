@@ -102,9 +102,7 @@
                             <label for="fechanacimiento">Fecha de Nacimiento (yyyy-mm-dd)</label>
                         </div>
                         
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-                            <i class="material-icons right">send</i>
-                        </button>
+                        <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">edit</i> Editar</button>
                     </div>
                 </form>
             </div>
@@ -133,9 +131,7 @@
                         </div>
                     </div>
                     
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Editar
-                        <i class="material-icons right">send</i>
-                    </button>
+                    <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">edit</i> Editar</button>
         
                 </form>
             </div>
