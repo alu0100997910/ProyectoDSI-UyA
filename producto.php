@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="/public/css/producto.css" type="text/css" />
     <link rel="stylesheet" href="/public/css/index.css" type="text/css" />
+    <link rel="stylesheet" href="public/css/carrito.css" type="text/css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -149,7 +150,7 @@
 
                     <div class="divider"></div>
                     <div class="section center-align">
-                        <a class="waves-effect waves-light btn-small #b71c1c red darken-4">ADD TO CART</a>
+                        <button onClick="addToCart(<?php echo $id ?>)" class="waves-effect waves-light btn-small red"><i class="material-icons right">add_shopping_cart</i>Add To Cart</button>
                     </div>
 
                 </div>
@@ -159,19 +160,10 @@
         <div id="carrito" class="modal">
             <div class="modal-content">
                 <h1>Carrito: <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat right"><i class="material-icons">close</i></a></h1>
-
-                <ul class="collection">
-                    <li class="collection-item avatar valign-wrapper">
-                        <img src="ipad.jpg" alt="" class="circle">
-                        <span class="title">Product Title</span>
-                        <a href="#" class="secondary-content"><i class="material-icons">remove_shopping_cart</i></a>
-                    </li>
-                    <li class="collection-item avatar valign-wrapper">
-                        <img src="ipad.jpg" alt="" class="circle">
-                        <span class="title">Product Title</span>
-                        <a href="#" class="secondary-content"><i class="material-icons">remove_shopping_cart</i></a>
-                    </li>
-                </ul>
+                <ul class="collection"></ul>
+                <div class="center-align">
+                    <button class="waves-effect waves-light btn"><i class="material-icons left">payment</i>Realizar Pedido</button>
+                </div>
             </div>
         </div>
     </main>
@@ -217,6 +209,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script type="text/javascript" src="public/js/materialize-init.js"></script>
+    <script type="text/javascript" src="public/js/carrito.js"></script>
 
 </body>
 

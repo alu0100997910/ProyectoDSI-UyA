@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="public/css/index.css" type="text/css" />
+  <link rel="stylesheet" href="public/css/carrito.css" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio | Hociko's</title>
 </head>
@@ -141,17 +142,11 @@
           </div>
           <div class="row">
             <div class="divider"></div>
-            <div class="section" id="product-list">
-              
-              
-              
-            </div>
+            <div class="section" id="product-list"></div>
             <div class="section">
               <div class="col s12">
                 <div class="center-align">
-                  <ul class="pagination">
-                    
-                  </ul>
+                  <ul class="pagination"></ul>
                 </div>
               </div>
             </div>
@@ -163,19 +158,10 @@
     <div id="carrito" class="modal">
       <div class="modal-content">
         <h1>Carrito: <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat right"><i class="material-icons">close</i></a></h1>
-        <ul class="collection">
-          <li class="collection-item avatar valign-wrapper">
-            <img src="ipad.jpg" alt="" class="circle">
-            <span class="title">Product Title</span>
-            <a href="#" class="secondary-content"><i class="material-icons">remove_shopping_cart</i></a>
-          </li>
-          <li class="collection-item avatar valign-wrapper">
-            <img src="ipad.jpg" alt="" class="circle">
-            <span class="title">Product Title</span>
-            <a href="#" class="secondary-content"><i class="material-icons">remove_shopping_cart</i></a>
-          </li>
-        </ul>
-  
+        <ul class="collection"></ul>
+        <div class="center-align">
+          <button class="waves-effect waves-light btn"><i class="material-icons left">payment</i>Realizar Pedido</button>
+        </div>
       </div>
     </div>
   </main>

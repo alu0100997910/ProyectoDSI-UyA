@@ -57,7 +57,7 @@ function filter(){
                                     </div>
                                 </div>
                             <div class="card-action center-align">
-                                <a onClick="add(this)" class="waves-effect waves-light btn-small red"><i class="material-icons right">add_shopping_cart</i>Add To Cart</a>
+                                <button onClick="addToCart(${res.items[i].id})" class="waves-effect waves-light btn-small red"><i class="material-icons right">add_shopping_cart</i>Add To Cart</button>
                             </div>
                         </div>
                     </div>

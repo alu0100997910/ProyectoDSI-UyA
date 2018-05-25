@@ -11,7 +11,7 @@
             case 'GET':
                 header("Access-Control-Allow-Origin: *");
                 header("Content-Type: application/json; charset=UTF-8");
-                echo json_encode($cart->get());
+                echo json_encode(array("cart" => $cart->get()));
                 break;
             case 'POST':
                 header("Access-Control-Allow-Origin: *");
@@ -35,7 +35,7 @@
                         "categoria"=>$categoria
                     );
                     $cart->push($product_item);
-                    echo json_encode($cart->get());
+                    echo json_encode(array("cart" => $cart->get()));
                     $_SESSION['cart']=serialize($cart);
                 } else {
                     header('HTTP/1.1 404 Not Found');
@@ -49,7 +49,7 @@
                 header("Content-Type: application/json; charset=UTF-8");
                 $data = json_decode(file_get_contents("php://input"));
                 if($cart->pop($data->pos)){
-                    echo json_encode($cart->get());
+                    echo json_encode(array("cart" => $cart->get()));
                     $_SESSION['cart']=serialize($cart);
                 } else{
                     header('HTTP/1.1 404 Not Found');

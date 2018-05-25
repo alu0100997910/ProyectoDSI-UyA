@@ -45,11 +45,15 @@ h3{
   width: 20px;
 }
 
-a{
+a:hover, button:hover, li.collection-item:hover{
+  font-weight: bold;
+}
+
+footer a{
   color:#cfe94c;
 }
 
-a:hover {
+footer a:hover {
   color:black;
   font-weight:bold;
 }
