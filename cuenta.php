@@ -13,16 +13,15 @@
     $row=mysqli_fetch_assoc($stmt);
     extract($row);
     $user_item=array(
-        "id" => $id,
-        "name" => $name,
-        "lastname" => $lastname,
-        "email" => $email,
-        "password" => $password,
-        "avatar" => $avatar,
-        "fechanacimiento" => $fechanacimiento,
-        "fechaalta" => $fecharegistro
+      "id" => $id,
+      "name" => $name,
+      "lastname" => $lastname,
+      "email" => $email,
+      "password" => $password,
+      "avatar" => $avatar,
+      "fechanacimiento" => $fechanacimiento,
+      "fechaalta" => $fecharegistro
     );
-    
 ?>
 
 <!DOCTYPE html>
@@ -130,19 +129,10 @@
                             <input class="file-path validate" type="text">
                         </div>
                     </div>
-                    
                     <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">edit</i> Editar</button>
-        
                 </form>
             </div>
         </div>
-        
-        
-        
-        
-        
-        
-        
     </div>
     
     

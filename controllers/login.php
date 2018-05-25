@@ -1,6 +1,7 @@
 <?php
     include_once '../config/database.php';
     include_once '../models/user.php';
+    include_once '../models/carrito.php';
     
     $method=$_SERVER['REQUEST_METHOD'];
     
@@ -21,6 +22,8 @@
                     if($password == hash('sha256',$data->password)){
                         session_start();
                         $_SESSION["userid"]=$id;
+                        $cart=new Carrito();
+                        $_SESSION["cart"]=serialize($cart);
                         echo json_encode(array("message"=>"Usuario identificado correctamente!"));
                     }
                     else{
