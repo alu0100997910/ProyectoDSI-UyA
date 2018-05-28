@@ -1,4 +1,16 @@
-.remove-cart{
-    position:absolute;
-    right:16px;
+.wrapper {
+    display:flex;
+    flex-wrap:nowrap;
+    align-items: center;
+}
+.price-tag {
+    margin-right:10px;
+}
+
+.product-image{
+    top:21px !important;
+}
+
+.remove-cart {
+    margin-right:10px;
 }

@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+function getCart(){
     $.ajax({
         url: "/controllers/carrito.php",
         type: "GET",
@@ -7,18 +7,22 @@ $( document ).ready(function() {
             let html="";
             for (let i in res.cart){
                 html+= `
-                    <li class="collection-item avatar valign-wrapper">
-                        <a href="producto.php?id=${res.cart[i].id}">
-                            <img src="assets/products/${res.cart[i].img}" alt="${res.cart[i].alt}" class="circle">
-                            <span class="title"><span class="new badge blue price-tag" data-badge-caption="€">${res.cart[i].price}</span>${res.cart[i].name}</span>
-                        </a>
+                    <li class="collection-item avatar wrapper">
+                        <img src="assets/products/${res.cart[i].img}" alt="${res.cart[i].alt}" class="circle product-image">
                         <button onClick="removeFromCart(${i})" class="waves-effect red btn-flat remove-cart"><i class="material-icons">remove_shopping_cart</i></button>
+                        <a href="producto.php?id=${res.cart[i].id}" >
+                            <span class="title truncate"><span class="new badge blue price-tag left" data-badge-caption="€">${res.cart[i].price}</span>${res.cart[i].name}</span>
+                        </a>
                     </li>
                 `;
             }
             $("#carrito .modal-content .collection").html(html);
         }
     });
+}
+
+$( document ).ready(function() {
+    getCart();
 });
 
 function addToCart(id){
@@ -29,19 +33,7 @@ function addToCart(id){
         data: JSON.stringify(params),
         dataType: 'json',
         success: (res) => {
-            let html="";
-            for (let i in res.cart){
-                html+= `
-                    <li class="collection-item avatar valign-wrapper">
-                        <a href="producto.php?id=${res.cart[i].id}">
-                            <img src="assets/products/${res.cart[i].img}" alt="${res.cart[i].alt}" class="circle">
-                            <span class="title"><span class="new badge blue price-tag" data-badge-caption="€">${res.cart[i].price}</span>${res.cart[i].name}</span>
-                        </a>
-                        <button onClick="removeFromCart(${i})" class="waves-effect red btn-flat remove-cart"><i class="material-icons">remove_shopping_cart</i></button>
-                    </li>
-                `;
-            }
-            $("#carrito .modal-content .collection").html(html);
+            getCart();
         }
     });
 }
@@ -54,19 +46,7 @@ function removeFromCart(pos){
         data: JSON.stringify(params),
         dataType: 'json',
         success: (res) => {
-            let html="";
-            for (let i in res.cart){
-                html+= `
-                    <li class="collection-item avatar valign-wrapper">
-                        <a href="producto.php?id=${res.cart[i].id}">
-                            <img src="assets/products/${res.cart[i].img}" alt="${res.cart[i].alt}" class="circle">
-                            <span class="title"><span class="new badge blue price-tag" data-badge-caption="€">${res.cart[i].price}</span>${res.cart[i].name}</span>
-                        </a>
-                        <button onClick="removeFromCart(${i})" class="waves-effect red btn-flat remove-cart"><i class="material-icons">remove_shopping_cart</i></button>
-                    </li>
-                `;
-            }
-            $("#carrito .modal-content .collection").html(html);
+            getCart();
         }
     });
 }

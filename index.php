@@ -66,22 +66,22 @@
           <div class="section">
             <h1>Categorias:</h1>
             <ul id="category" class="collection center-align">
-              <li class="collection-item black-text selected" value=0>Todos</li>
-              <li class="collection-item black-text" value=1>Alimentos</li>
-              <li class="collection-item black-text" value=2>Juguetes y accesorios</li>
-              <li class="collection-item black-text" value=3>Casetas</li>
-              <li class="collection-item black-text" value=4>Baño</li>
+              <li tabindex="0" class="collection-item black-text selected"  value=0>Todos</li>
+              <li tabindex="0" class="collection-item black-text" value=1>Alimentos</li>
+              <li tabindex="0" class="collection-item black-text" value=2>Juguetes y accesorios</li>
+              <li tabindex="0" class="collection-item black-text" value=3>Casetas</li>
+              <li tabindex="0" class="collection-item black-text" value=4>Baño</li>
             </ul>
           </div>
           <div class="divider"></div>
           <div class="section">
             <h1>Precio:</h1>
             <ul id="price" class="collection center-align">
-              <li class="collection-item black-text selected" value=0>Todos</li>
-              <li class="collection-item black-text" value=1>5 - 20 €</li>
-              <li class="collection-item black-text" value=2>20 - 40 €</li>
-              <li class="collection-item black-text" value=3>40 - 60 €</li>
-              <li class="collection-item black-text" value=4>60 - 80 €</li>
+              <li tabindex="0" class="collection-item black-text selected" value=0>Todos</li>
+              <li tabindex="0" class="collection-item black-text" value=1>5 - 20 €</li>
+              <li tabindex="0" class="collection-item black-text" value=2>20 - 40 €</li>
+              <li tabindex="0" class="collection-item black-text" value=3>40 - 60 €</li>
+              <li tabindex="0" class="collection-item black-text" value=4>60 - 80 €</li>
             </ul>
           </div>
           <div class="divider"></div>
@@ -155,7 +155,7 @@
       </div>
     </div>
     <!-- IMPLEMENTACION CARRITO -->
-    <div id="carrito" class="modal">
+    <div id="carrito" class="modal" role="dialog">
       <div class="modal-content">
         <h1>Carrito: <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat right"><i class="material-icons">close</i></a></h1>
         <ul class="collection"></ul>

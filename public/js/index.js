@@ -5,6 +5,13 @@ $( document ).ready(function() {
     filter();
 });
 
+$("ul.collection li.collection-item").keypress(function(e){
+    let code=e.which;
+    if(code == 13){
+        $(this).click();
+    }
+});
+
 $("#boletin").submit(e=>{
    e.preventDefault(); 
 });

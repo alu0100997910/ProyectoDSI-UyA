@@ -157,7 +157,7 @@
             </div>
         </div>
         <!-- IMPLEMENTACION CARRITO -->
-        <div id="carrito" class="modal">
+        <div id="carrito" class="modal" role="dialog">
             <div class="modal-content">
                 <h1>Carrito: <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat right"><i class="material-icons">close</i></a></h1>
                 <ul class="collection"></ul>

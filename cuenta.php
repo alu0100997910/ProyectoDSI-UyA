@@ -66,7 +66,7 @@
             <div class="col s12 m5 card-panel pb-15">
                 <form id="datos">
                     <h1 class="center-align"><i class="material-icons">settings</i> Datos de la cuenta</h1>
-                    <div id="alertadatos" class="col s10 push-s1" hidden></div>
+                    <div id="alertadatos" role="alert" class="col s10 push-s1" aria-live="polite" hidden></div>
                     <div class="col s12 l6">
                         <div class="input-field">
                             <i class="material-icons prefix">person_outline</i>
@@ -109,7 +109,7 @@
             <div class="col s12 m5 push-m2 card-panel pb-15">
                 <form id="avatar" method="post">
                     <h1 class="center-align"><i class="material-icons">image</i> Avatar</h1>
-                    <div id="alertaavatar" class="col s10 push-s1" hidden></div>
+                    <div id="alertaavatar" role="alert" class="col s10 push-s1" aria-live="polite" hidden></div>
                     <div class="center-align">
                         <?php 
                             if($user_item['avatar']==null){
@@ -138,7 +138,7 @@
     
     
     <!-- IMPLEMENTACION CARRITO -->
-    <div id="carrito" class="modal">
+    <div id="carrito" class="modal" role="dialog">
       <div class="modal-content">
         <h1>Carrito: <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat right"><i class="material-icons">close</i></a></h1>
         <ul class="collection"></ul>

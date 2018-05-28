@@ -59,8 +59,8 @@ $("#avatar").submit((e) => {
     let form_data = new FormData();
     form_data.append('fileToUpload', file_data);
     $.ajax({
-        url: 'controllers/uploadAvatar.php', // point to server-side PHP script 
-        dataType: 'json', // what to expect back from the PHP script, if anything
+        url: 'controllers/uploadAvatar.php',
+        dataType: 'json',
         cache: false,
         contentType: false,
         processData: false,
