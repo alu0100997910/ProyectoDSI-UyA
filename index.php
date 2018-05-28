@@ -19,8 +19,8 @@
     if(isset($_SESSION["userid"])){ /* Barra Navegación Logeado*/
       echo '<nav>
         <div class="nav-wrapper bg-f15156">
-          <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
           <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
+          <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
           <ul class="right hide-on-med-and-down">
             <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
             <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
@@ -40,8 +40,8 @@
       echo '
       <nav>
         <div class="nav-wrapper bg-f15156">
-          <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
           <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
+          <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i>Registrate</a></li>
             <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesion</a></li>
@@ -146,7 +146,7 @@
             <div class="section">
               <div class="col s12">
                 <div class="center-align">
-                  <ul class="pagination"></ul>
+                  <ul class="pagination" aria-live="polite"></ul>
                 </div>
               </div>
             </div>

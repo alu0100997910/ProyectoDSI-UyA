@@ -3,6 +3,14 @@ let price=0;
 let page=1;
 $( document ).ready(function() {
     filter();
+    $( window ).resize(()=>{
+        if($(window).width()>992){
+            $("#slide-out").attr("hidden", "true");
+        } else {
+            $("#slide-out").removeAttr("hidden");
+        }
+    })
+    
 });
 
 $("ul.collection li.collection-item").keypress(function(e){
