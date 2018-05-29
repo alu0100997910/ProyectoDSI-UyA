@@ -165,7 +165,7 @@
           <img class="circle responsive-img social-icon" alt="Logo de twitter" src="assets/img/twitter.jpg">
         </div>
         <div class="col l4 offset-l2 s6">
-          <h2 class="white-text">Atencion al cliente</h2>
+          <h2 class="white-text">Atención al cliente</h2>
           <ul>
             <li>
               <a href="#">Contacta con nosotros</a>
@@ -174,7 +174,7 @@
               <a href="#">Devoluciones</a>
             </li>
             <li>
-              <a href="#">Soluciones tecnicas</a>
+              <a href="#">Soluciones técnicas</a>
             </li>
             <li>
               <a href="#">Preguntas frecuentes</a>

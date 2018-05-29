@@ -43,15 +43,15 @@
           <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
           <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i>Registrate</a></li>
-            <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesion</a></li>
+            <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i>Regístrate</a></li>
+            <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesión</a></li>
           </ul>
         </div>
       </nav>
       <ul id="slide-out" class="sidenav">
         <li><div class="container"><img class="responsive-img mt-15" alt="logo de hocikos" src="assets/img/logo-navbar.png"></div></li>
-        <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i> Registrate</a></li>
-        <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesion</a></li>
+        <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i> Regístrate</a></li>
+        <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesión</a></li>
       </ul>';
     }
     
@@ -182,7 +182,7 @@
           <img class="circle responsive-img social-icon" alt="Logo de twitter" src="assets/img/twitter.jpg">
         </div>
         <div class="col l4 offset-l2 s6">
-          <h2 class="white-text">Atencion al cliente</h2>
+          <h2 class="white-text">Atención al cliente</h2>
           <ul>
             <li>
               <a href="#">Contacta con nosotros</a>
@@ -191,7 +191,7 @@
               <a href="#">Devoluciones</a>
             </li>
             <li>
-              <a href="#">Soluciones tecnicas</a>
+              <a href="#">Soluciones técnicas</a>
             </li>
             <li>
               <a href="#">Preguntas frecuentes</a>
