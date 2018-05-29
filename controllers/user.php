@@ -23,7 +23,9 @@
                     $user->id=$_SESSION['userid'];
                     $user->name=$data->name;
                     $user->lastname=$data->lastname;
-                    $user->password=hash('sha256',$data->password);
+                    if($data->password != null){
+                        $user->password=hash('sha256',$data->password);
+                    }
                     $user->fechanacimiento=$data->fechanacimiento;
                     if($user->updateUser()){
                         header('HTTP/1.1 201 Created');
