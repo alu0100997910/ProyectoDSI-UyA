@@ -15,6 +15,10 @@
             $this->carrito=array_values($this->carrito);
         }
         
+        public function order(){
+            $this->carrito=[];
+        }
+        
         public function size(){
             return count($this->carrito);
         }
@@ -33,6 +37,10 @@
         
         public function push($elem){
             $this->data->push($elem);
+        }
+        
+        public function order(){
+            $this->data->order();
         }
         
         public function pop($pos){

@@ -3,14 +3,6 @@ let price=0;
 let page=1;
 $( document ).ready(function() {
     filter();
-    $( window ).resize(()=>{
-        if($(window).width()>992){
-            $("#slide-out").attr("hidden", "true");
-        } else {
-            $("#slide-out").removeAttr("hidden");
-        }
-    })
-    
 });
 
 $("ul.collection li.collection-item").keypress(function(e){
@@ -65,14 +57,14 @@ function filter(){
                                 <img src="../assets/products/${res.items[i].img}" alt="${res.items[i].alt}">
                             </div>
                             <div class="card-content">
-                                <span class="card-title">${res.items[i].name}<span class="new badge blue price-tag" data-badge-caption="€">${res.items[i].price}</span></span>
+                                <span class="card-title">${res.items[i].name}<span class="new badge #1976d2 blue darken-2 price-tag bold" data-badge-caption="€">${res.items[i].price}</span></span>
                                     <p class="truncate">${res.items[i].desc}</p>
                                     <div class="center-align mt-15">
-                                        <a href="producto.php?id=${res.items[i].id}" class="waves-effect waves-light btn-small blue"><i class="material-icons right">info</i>Info</a>
+                                        <a href="producto.php?id=${res.items[i].id}" class="waves-effect waves-light btn-small #1976d2 blue darken-2"><i class="material-icons right">info</i>Info</a>
                                     </div>
                                 </div>
                             <div class="card-action center-align">
-                                <button onClick="addToCart(${res.items[i].id})" class="waves-effect waves-light btn-small red"><i class="material-icons right">add_shopping_cart</i>Add To Cart</button>
+                                <button onClick="addToCart(${res.items[i].id})" class="waves-effect waves-light btn-small #d32f2f red darken-2"><i class="material-icons right">add_shopping_cart</i>Add To Cart</button>
                             </div>
                         </div>
                     </div>

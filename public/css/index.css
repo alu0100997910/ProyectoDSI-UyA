@@ -8,6 +8,14 @@
   margin-left:10px;
 }
 
+.bold {
+  font-weight: bold !important;
+}
+
+.placeholder{
+	color:black !important;
+}
+
 .bg-721121{
   background-color:#721121 !important;
 }

@@ -15,8 +15,8 @@ $("#registro").submit((e) => {
             success: (res) => {
                 console.log(res);
                 let alerta = `
-                <div class="card-panel #8bc34a light-green center-align">
-                    <span class="white-text">${res.message}</span>
+                <div class="card-panel #b2ff59 light-green accent-2 center-align">
+                    <span class="black-text">${res.message}</span>
                 </div>
                 `;
                 $("#ajaxres").html(alerta).removeAttr("hidden");

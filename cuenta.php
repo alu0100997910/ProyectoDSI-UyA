@@ -2,7 +2,6 @@
     session_start();
     if(!isset($_SESSION["userid"]))
         header('Location: /404.html');
-        
     include_once 'config/database.php';
     include_once 'models/user.php';
     
@@ -42,22 +41,22 @@
 <body class="bg-ffc07f">
   <header>
     <nav>
-        <div class="nav-wrapper bg-f15156">
-          <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
-          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
-            <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
-            <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
-          </ul>
-        </div>
-      </nav>
-      <ul id="slide-out" class="sidenav">
-        <li><div class="container"><img class="responsive-img mt-15" src="assets/img/logo-navbar.png"></div></li>
-        <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
-        <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
-        <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
-      </ul>
+      <div class="nav-wrapper bg-f15156">
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
+        <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
+        <ul class="right hide-on-med-and-down" id="nav-buttons">
+          <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
+          <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
+          <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
+        </ul>
+        <ul id="slide-out" class="sidenav">
+          <li><div class="container"><img class="responsive-img mt-15" src="assets/img/logo-navbar.png" alt="logo de hocikos"></div></li>
+          <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
+          <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
+          <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
   <main class="valign-wrapper">
     <!-- CONTENIDO -->
@@ -71,21 +70,21 @@
                         <div class="input-field">
                             <i class="material-icons prefix">person_outline</i>
                             <input placeholder="<?php echo $user_item['name'] ?>" id="name" type="text">
-                            <label for="name">Nombre</label>
+                            <label class="placeholder" for="name">Nombre</label>
                         </div>
                     </div>
                     <div class="col s12 l6">
                         <div class="input-field">
                             <i class="material-icons prefix">person_outline</i>
                             <input placeholder="<?php echo $user_item['lastname'] ?>" id="lastname" type="text">
-                            <label for="lastname">Apellidos</label>
+                            <label class="placeholder" for="lastname">Apellidos</label>
                         </div>
                     </div>
                     <div class="col s12">
                         <div class="input-field">
                             <i class="material-icons prefix">lock</i>
                             <input id="password" type="password">
-                            <label for="password">Nueva Contraseña</label>
+                            <label class="placeholder" for="password">Nueva Contraseña</label>
                         </div>
                     </div>
                     <div class="col s12">
@@ -99,10 +98,10 @@
                                 }
                             ?>
                             
-                            <label for="fechanacimiento">Fecha de Nacimiento (yyyy-mm-dd)</label>
+                            <label class="placeholder" for="fechanacimiento">Fecha de Nacimiento (yyyy-mm-dd)</label>
                         </div>
                         
-                        <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">edit</i> Editar</button>
+                        <button class="btn waves-effect waves-light #2e7d32 green darken-3" type="submit" name="action"><i class="material-icons right">edit</i> Editar</button>
                     </div>
                 </form>
             </div>
@@ -113,24 +112,23 @@
                     <div class="center-align">
                         <?php 
                             if($user_item['avatar']==null){
-                                echo '<img id="avatarpic" src="assets/userAvatars/default.png">';
+                                echo '<img id="avatarpic" src="assets/userAvatars/default.png" alt="Foto de perfil">';
                             } else {
-                                echo '<img id="avatarpic" src="assets/userAvatars/' . $user_item['avatar'] . '">';
+                                echo '<img id="avatarpic" src="assets/userAvatars/' . $user_item['avatar'] . '" alt="Foto de perfil">';
                             }
                         ?>
                         
                     </div>
                     <div class="file-field input-field">
-                        <div class="btn">
+                        <div class="btn waves-effect waves-light #2e7d32 green darken-3">
                             <span><i class="material-icons">file_upload</i></span>
-                            <input type="file" id="fileToUpload" name="fileToUpload">
-                            <label for="fileToUpload"></label>
+                            <input type="file" id="fileToUpload" name="fileToUpload" aria-label="Subir fichero">
                         </div>
                         <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
+                            <input class="file-path validate" type="text" aria-label="Nombre del fichero a subir">
                         </div>
                     </div>
-                    <button class="btn waves-effect waves-light" type="submit" name="action"><i class="material-icons right">edit</i> Editar</button>
+                    <button class="btn waves-effect waves-light #2e7d32 green darken-3" type="submit" name="action"><i class="material-icons right">edit</i> Editar</button>
                 </form>
             </div>
         </div>
@@ -141,9 +139,10 @@
     <div id="carrito" class="modal" role="dialog">
       <div class="modal-content">
         <h1>Carrito: <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat right"><i class="material-icons">close</i></a></h1>
+        <div id="order-alert" class="col s10 push-s1" role="alert" aria-live="polite" hidden></div>
         <ul class="collection"></ul>
         <div class="center-align">
-          <button class="waves-effect waves-light btn"><i class="material-icons left">payment</i>Realizar Pedido</button>
+          <button id="order" class="waves-effect waves-light btn"><i class="material-icons left">payment</i>Realizar Pedido</button>
         </div>
       </div>
     </div>
@@ -195,6 +194,7 @@
   <script type="text/javascript" src="public/js/materialize-init.js"></script>
   <script type="text/javascript" src="public/js/carrito.js"></script>
   <script type="text/javascript" src="public/js/cuenta.js"></script>
+  <script type="text/javascript" src="public/js/navbar.js"></script>
 </body>
 
 </html>

@@ -48,15 +48,22 @@
                 header("Access-Control-Allow-Origin: *");
                 header("Content-Type: application/json; charset=UTF-8");
                 $data = json_decode(file_get_contents("php://input"));
-                if($cart->pop($data->pos)){
-                    echo json_encode(array("cart" => $cart->get()));
+                if($data->pos=="order"){
+                    $cart->order();
+                    echo json_encode(array("message" => "Pedido realizado con éxito"));
                     $_SESSION['cart']=serialize($cart);
                 } else{
-                    header('HTTP/1.1 404 Not Found');
-                    echo json_encode(
-                        array("message" => "Posicion en el carrito erronea")
-                    );
+                    if($cart->pop($data->pos)){
+                        echo json_encode(array("cart" => $cart->get()));
+                        $_SESSION['cart']=serialize($cart);
+                    } else{
+                        header('HTTP/1.1 404 Not Found');
+                        echo json_encode(
+                            array("message" => "Posicion en el carrito erronea")
+                        );
+                    }
                 }
+                
                 break;
             default:
                 header('HTTP/1.1 405 Method not allowed');

@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="public/css/index.css" type="text/css" />
   <link rel="stylesheet" href="public/css/carrito.css" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,19 +20,19 @@
         <div class="nav-wrapper bg-f15156">
           <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
           <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
-          <ul class="right hide-on-med-and-down">
+          <ul class="right hide-on-med-and-down" id="nav-buttons">
+            <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
+            <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
+            <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
+          </ul>
+          <ul id="slide-out" class="sidenav">
+            <li><div class="container"><img class="responsive-img mt-15" src="assets/img/logo-navbar.png" alt="logo de hocikos"></div></li>
             <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
             <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
             <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
           </ul>
         </div>
-      </nav>
-      <ul id="slide-out" class="sidenav">
-        <li><div class="container"><img class="responsive-img mt-15" src="assets/img/logo-navbar.png"></div></li>
-        <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
-        <li><a href="cuenta.php" class="black-text"><i class="material-icons left">settings</i>Cuenta</a></li>
-        <li><a href="controllers/logout.php" class="black-text"><i class="material-icons left">power_settings_new</i>Desconectar</a></li>
-      </ul>'; /**/
+      </nav>'; /**/
     }
     
     else { /*Barra Navegacion Deslogeado*/  
@@ -42,17 +41,17 @@
         <div class="nav-wrapper bg-f15156">
           <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
           <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
-          <ul class="right hide-on-med-and-down">
+          <ul class="right hide-on-med-and-down" id="nav-buttons">
             <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i>Regístrate</a></li>
             <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesión</a></li>
           </ul>
+          <ul id="slide-out" class="sidenav show-on-medium-and-down">
+            <li><div class="container"><img class="responsive-img mt-15" alt="logo de hocikos" src="assets/img/logo-navbar.png"></div></li>
+            <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i> Regístrate</a></li>
+            <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesión</a></li>
+          </ul>
         </div>
-      </nav>
-      <ul id="slide-out" class="sidenav">
-        <li><div class="container"><img class="responsive-img mt-15" alt="logo de hocikos" src="assets/img/logo-navbar.png"></div></li>
-        <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i> Regístrate</a></li>
-        <li><a href="login.html" class="black-text"><i class="material-icons left">exit_to_app</i>Iniciar Sesión</a></li>
-      </ul>';
+      </nav>';
     }
     
     ?>
@@ -158,9 +157,10 @@
     <div id="carrito" class="modal" role="dialog">
       <div class="modal-content">
         <h1>Carrito: <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat right"><i class="material-icons">close</i></a></h1>
+        <div id="order-alert" class="col s10 push-s1" role="alert" aria-live="polite" hidden></div>
         <ul class="collection"></ul>
         <div class="center-align">
-          <button class="waves-effect waves-light btn"><i class="material-icons left">payment</i>Realizar Pedido</button>
+          <button id="order" class="waves-effect waves-light btn"><i class="material-icons left">payment</i>Realizar Pedido</button>
         </div>
       </div>
     </div>
@@ -212,6 +212,7 @@
   <script type="text/javascript" src="public/js/materialize-init.js"></script>
   <script type="text/javascript" src="public/js/index.js"></script>
   <script type="text/javascript" src="public/js/carrito.js"></script>
+  <script type="text/javascript" src="public/js/navbar.js"></script>
 </body>
 
 </html>

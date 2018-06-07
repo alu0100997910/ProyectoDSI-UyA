@@ -1,19 +1,16 @@
 <?php
     class Database {
-        private $host;
-        private $db_name;
+        private $host; 
+        private $db_name; 
         private $username;
         private $password;
-        public $connection;
         
         public function getConnection(){
-            
             $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
             $this->host = $url["host"];
             $this->username = $url["user"];
             $this->password = $url["pass"];
             $this->db_name = substr($url["path"], 1);
-            
             $this->connection = null;
             try {
                 $this->connection = new mysqli($this->host,$this->username,$this->password,$this->db_name);

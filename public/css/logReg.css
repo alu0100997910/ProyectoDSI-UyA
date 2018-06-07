@@ -6,6 +6,10 @@
   border: 1px dotted;
 }
 
+.placeholder{
+	color:black !important;
+}
+
 .bg {
 	/*background-color: #FFC07F;*/
 	/*CREMITA*/
@@ -40,16 +44,8 @@
 }
 
 .aregis a:hover {
-	color: #721121;
-}
-
-.waves-effect.waves-personal {
-	background-color: rgba(241, 81, 86, .85);
-	/*ROSA*/
-	/*background-color: rgba(255, 192, 127, 1);*/
-	/*CREMITA*/
-	/*background-color: rgba(165,64,45,1);*/
-	/*MARRON*/
+	color: blue;
+	text-decoration: underline;
 }
 
 h1 {
