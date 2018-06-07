@@ -34,7 +34,7 @@
             }
             if($this->price>0 && $this->price<5){
                 if($first) $query = $query . ' WHERE ';
-                else $query = $query . ', ';
+                else $query = $query . ' AND ';
                 $query=$query . 'price BETWEEN ';
                 switch($this->price){
                     case 1:
@@ -64,7 +64,7 @@
             }
             if($this->price>0 && $this->price<5){
                 if($first) $query = $query . ' WHERE ';
-                else $query = $query . ', ';
+                else $query = $query . ' AND ';
                 $query=$query . 'price BETWEEN ';
                 switch($this->price){
                     case 1:

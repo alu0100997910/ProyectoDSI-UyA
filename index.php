@@ -141,6 +141,8 @@
           </div>
           <div class="row">
             <div class="divider"></div>
+            <h1>Productos:</h1>
+            <div id="filter-alert" class="col s10 push-s1" role="alert" aria-live="polite" hidden></div>
             <div class="section" id="product-list"></div>
             <div class="section">
               <div class="col s12">

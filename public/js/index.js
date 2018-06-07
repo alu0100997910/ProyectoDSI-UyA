@@ -48,7 +48,7 @@ function filter(){
         dataType: 'json',
         success: (res) => {
             let numpages = parseInt(res.icount);
-            let texto = '<h1>Productos:</h1>';
+            let texto = '';
             for (let i in res.items){
                 texto+=`
                     <div class="col s12 m6 l6">
@@ -72,14 +72,23 @@ function filter(){
             }
             $("#product-list").html(texto);
             pagination(numpages);
+            page=1;
         },
         error: (res) => {
-            window.location.replace("/index.php");
+            let alerta = `
+                <div class="card-panel #b71c1c red darken-4 center-align">
+                    <span class="white-text">No hay productos que cumplan los filtros especificados</span>
+                </div>`;
+            $("#filter-alert").html(alerta).removeAttr("hidden");
+            $("#product-list").html("");
+            pagination(1);
+            //window.location.replace("/index.php");
         }
     });
 }
 
 $("#category .collection-item").click(function(){
+    $("#filter-alert").attr("hidden","true");
     $("#category .collection-item.selected").removeClass("selected");
     $(this).addClass("selected");
     categoria=$(this).val();
@@ -87,6 +96,7 @@ $("#category .collection-item").click(function(){
 });
 
 $("#price .collection-item").click(function(){
+    $("#filter-alert").attr("hidden","true");
     $("#price .collection-item.selected").removeClass("selected");
     $(this).addClass("selected");
     price=$(this).val();
