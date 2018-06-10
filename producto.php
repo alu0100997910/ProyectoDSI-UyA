@@ -45,7 +45,7 @@
     if(isset($_SESSION["userid"])){ /* Barra Navegación Logeado*/
       echo '<nav>
         <div class="nav-wrapper bg-f15156">
-          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
+          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
           <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
           <ul class="right hide-on-med-and-down" id="nav-buttons">
             <li><a class="black-text modal-trigger sidenav-close" href="#carrito"><i class="material-icons left">shopping_cart</i> Carrito</a></li>
@@ -66,7 +66,7 @@
       echo '
       <nav>
         <div class="nav-wrapper bg-f15156">
-          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons brown-text">menu</i></a>
+          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
           <a href="index.php" class="brand-logo valign-wrapper"><img src="assets/img/logo-navbar.png" alt="logo de hocikos" class="nav-logo"/></a>
           <ul class="right hide-on-med-and-down" id="nav-buttons">
             <li><a href="registro.html" class="black-text"><i class="material-icons left">person</i>Regístrate</a></li>
