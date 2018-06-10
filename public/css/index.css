@@ -115,3 +115,8 @@ main {
 .disabled {
   pointer-events: none;
 }
+
+ol {
+  list-style-type: none;
+  padding-left:0;
+}

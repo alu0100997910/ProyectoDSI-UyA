@@ -86,7 +86,7 @@
     <main class="valign-wrapper">
         <div class="container">
             <div class="row hide-on-large-only center-align">
-                <div id="product-image" class="col s7 m6 push-s2 push-m3 mt-15">
+                <div class="col s7 m6 push-s2 push-m3 mt-15 product-image-id">
                     <img class="materialboxed responsive-img" src="<?php echo "/assets/products/$img"; ?>" alt="<?php echo $alt; ?>">
                 </div>
                 <div class="col s12 l7">
@@ -122,7 +122,7 @@
             </div>
 
             <div class="row hide-on-med-and-down valign-wrapper">
-                <div id="product-image" class="col l6">
+                <div class="col l6 product-image-id">
                     <img class="materialboxed responsive-img" src="<?php echo "/assets/products/$img"; ?>" alt="<?php echo $alt; ?>">
                 </div>
                 <div class="col s12 l6">

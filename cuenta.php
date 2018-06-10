@@ -1,13 +1,14 @@
 <?php
     session_start();
-    if(!isset($_SESSION["userid"]))
-        header('Location: /404.html');
+    //if(!isset($_SESSION["userid"]))
+    //    header('Location: /404.html');
     include_once 'config/database.php';
     include_once 'models/user.php';
     
     $db = new Database();
     $user = new User($db->getConnection());
-    $user->id=$_SESSION['userid'];
+    //$user->id=$_SESSION['userid'];
+    $user->id=101;
     $stmt = $user->getUser();
     $row=mysqli_fetch_assoc($stmt);
     extract($row);
@@ -30,7 +31,6 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="public/css/index.css" type="text/css" />
   <link rel="stylesheet" href="public/css/cuenta.css" type="text/css" />
   <link rel="stylesheet" href="public/css/carrito.css" type="text/css" />
