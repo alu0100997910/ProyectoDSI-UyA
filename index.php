@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="public/css/index.css" type="text/css" />
   <link rel="stylesheet" href="public/css/carrito.css" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio | Hociko's</title>
+  <title>Hociko's | Tu tienda online de confianza</title>
 </head>
 
 <body class="bg-ffc07f">

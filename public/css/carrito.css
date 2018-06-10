@@ -14,3 +14,7 @@
 .remove-cart {
     margin-right:10px;
 }
+
+#order-alert ul>li{
+    list-style-type: disc;
+}

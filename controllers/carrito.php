@@ -49,9 +49,41 @@
                 header("Content-Type: application/json; charset=UTF-8");
                 $data = json_decode(file_get_contents("php://input"));
                 if($data->pos=="order"){
-                    $cart->order();
-                    echo json_encode(array("message" => "Pedido realizado con éxito"));
-                    $_SESSION['cart']=serialize($cart);
+                    $db=new Database();
+                    $product=new Product($db->getConnection());
+                    $stockpro=[];
+                    $namepro=[];
+                    $error=false;
+                    $errorpro=[];
+                    
+                    foreach($cart->get() as $i){
+                        $stockpro[$i["id"]]=$i["stock"];
+                        $namepro[$i["id"]]=$i["name"];
+                    }
+                    
+                    foreach($cart->get() as $i){
+                        $stockpro[$i["id"]]-=1;
+                    }
+                    
+                    foreach($stockpro as $i => $valor){
+                        if($valor<0){
+                            $error=true;
+                            array_push($errorpro, $namepro[$i]);
+                        }
+                    }
+                    if(!$error){
+                        foreach($stockpro as $i => $valor){
+                            $product->id=$i;
+                            $product->stock=$valor;
+                            $product->updStock();
+                        }
+                        $cart->order();
+                        echo json_encode(array("message" => "Pedido realizado con éxito"));
+                        $_SESSION['cart']=serialize($cart);
+                    } else {
+                        header('HTTP/1.1 400 Bad Request');
+                        echo json_encode(array("message" => "No se ha podido realizar el pedido debido a que no hay suficiente stock de los siguientes productos: ", "products" => $errorpro));
+                    }
                 } else{
                     if($cart->pop($data->pos)){
                         echo json_encode(array("cart" => $cart->get()));

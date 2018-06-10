@@ -19,6 +19,11 @@
             $this->conn = $db;
         }
         
+        public function updStock(){
+            $query='UPDATE ' . $this->table . ' SET stock=' . $this->stock . ' WHERE id=' . $this->id . ';';
+            return $this->conn->query($query);
+        }
+        
         public function getProduct(){
             $query = 'SELECT * FROM ' . $this->table . ' WHERE id="' . $this->id . '";';
             return $this->conn->query($query);
