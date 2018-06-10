@@ -36,21 +36,18 @@ function pagination(numpages){
     $(".pagination").html(texto);
     $(`.pagination li button[value="${page}"]`).addClass('selected');
     $("#page-left").click(function(){
-        console.log("b");
         page=parseInt($(".pagination li button.selected").val())-1;
         $(".pagination li button.selected").removeClass("selected");
         $(`.pagination li button[value="${page}"]`).addClass('selected');
         filter();
     });
     $("#page-right").click(function(){
-        console.log("c");
         page=parseInt($(".pagination li button.selected").val())+1;
         $(".pagination li button.selected").removeClass("selected");
         $(`.pagination li button[value="${page}"]`).addClass('selected');
         filter();
     });
     $(".pagination li button[value]").click(function() {
-        console.log("a");
         page=parseInt($(this).val());
         filter();
     });
@@ -58,7 +55,6 @@ function pagination(numpages){
 }
 
 function filter(){
-    console.log(`cat=${categoria}&price=${price}&page=${page}`);
     $.ajax({
         url: "/controllers/product.php",
         type: "GET",
