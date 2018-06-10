@@ -49,9 +49,21 @@ function filter(){
         success: (res) => {
             let numpages = parseInt(res.icount);
             let texto = '';
+            let first=true;
             for (let i in res.items){
+                if(!(i%2)){
+                    if(!first){
+                        texto += '</div>';
+                        if(i!=res.items.length-1)
+                            texto += '<div class="row">';
+                    } else {
+                        first=false;
+                        texto += '<div class="row">';
+                    }
+                }
+                
                 texto+=`
-                    <div class="col s12 m6 l6">
+                    <div class="col s12 m6">
                         <div class="card #fff8e1 amber lighten-5">
                             <div class="card-image">
                                 <img src="../assets/products/${res.items[i].img}" alt="${res.items[i].alt}">
@@ -69,6 +81,9 @@ function filter(){
                         </div>
                     </div>
                 `;
+                if (i==res.items.length-1){
+                    texto += '</div>';
+                }
             }
             $("#product-list").html(texto);
             pagination(numpages);
