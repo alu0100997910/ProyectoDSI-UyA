@@ -1,6 +1,6 @@
 let categoria=0;
 let price=0;
-let page=1;
+var page=1;
 $( document ).ready(function() {
     filter();
 });
@@ -15,32 +15,50 @@ $("ul.collection li.collection-item").keypress(function(e){
 $("#boletin").submit(e=>{
    e.preventDefault(); 
 });
+
 function pagination(numpages){
     let texto='';
     if(page==1){
-        texto += `<li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>`;
+        texto += `<li><button id="page-left" class="waves-effect waves-light btn-small btn-flat disabled"><i class="material-icons">chevron_left</i></button></li>`;
     }else{
-        texto += `<li class="waves-effect"><a href="#"><i class="material-icons">chevron_left</i></a></li>`
+        texto += `<li><button id="page-left" class="waves-effect waves-light btn-small btn-flat"><i class="material-icons">chevron_left</i></button></li>`;
     }
     
     for(let i=0;i<numpages/4;i++){
-        texto += `<li class="waves-effect"><button class="btn-small btn-flat" value=${i+1}>${i+1}</btn></li>`
+        texto += `<li><button class="waves-effect waves-light btn-small btn-flat" value=${i+1}>${i+1}</button></li>`;
     }
     
     if(page==(numpages%4?Math.floor((numpages)/4)+1:Math.floor((numpages)/4))){
-        texto += `<li class="disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>`;
+        texto += `<li><button id="page-right" class="waves-effect waves-light btn-small btn-flat disabled"><i class="material-icons">chevron_right</i></button></li>`;
     }else{
-        texto+= `<li class="waves-effect"><a href="#"><i class="material-icons">chevron_right</i></a></li>`;
+        texto += `<li><button id="page-right" class="waves-effect waves-light btn-small btn-flat"><i class="material-icons">chevron_right</i></button></li>`;
     }
     $(".pagination").html(texto);
     $(`.pagination li button[value="${page}"]`).addClass('selected');
-    $(".pagination li button").click(function() {
-        page=$(this).val();
+    $("#page-left").click(function(){
+        console.log("b");
+        page=parseInt($(".pagination li button.selected").val())-1;
+        $(".pagination li button.selected").removeClass("selected");
+        $(`.pagination li button[value="${page}"]`).addClass('selected');
         filter();
     });
+    $("#page-right").click(function(){
+        console.log("c");
+        page=parseInt($(".pagination li button.selected").val())+1;
+        $(".pagination li button.selected").removeClass("selected");
+        $(`.pagination li button[value="${page}"]`).addClass('selected');
+        filter();
+    });
+    $(".pagination li button[value]").click(function() {
+        console.log("a");
+        page=parseInt($(this).val());
+        filter();
+    });
+    
 }
 
 function filter(){
+    console.log(`cat=${categoria}&price=${price}&page=${page}`);
     $.ajax({
         url: "/controllers/product.php",
         type: "GET",
@@ -97,7 +115,6 @@ function filter(){
             $("#filter-alert").html(alerta).removeAttr("hidden");
             $("#product-list").html("");
             pagination(1);
-            //window.location.replace("/index.php");
         }
     });
 }
@@ -106,7 +123,7 @@ $("#category .collection-item").click(function(){
     $("#filter-alert").attr("hidden","true");
     $("#category .collection-item.selected").removeClass("selected");
     $(this).addClass("selected");
-    categoria=$(this).val();
+    categoria=parseInt($(this).val());
     filter();
 });
 
@@ -114,6 +131,6 @@ $("#price .collection-item").click(function(){
     $("#filter-alert").attr("hidden","true");
     $("#price .collection-item.selected").removeClass("selected");
     $(this).addClass("selected");
-    price=$(this).val();
+    price=parseInt($(this).val());
     filter();
 });
