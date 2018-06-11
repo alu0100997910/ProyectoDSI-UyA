@@ -116,7 +116,7 @@
 
                     <div class="divider"></div>
                     <div class="section center-align">
-                        <a class="waves-effect waves-light btn-small #b71c1c red darken-4">ADD TO CART</a>
+                        <a class="waves-effect waves-light btn-small #b71c1c red darken-4"><i class="material-icons right">add_shopping_cart</i>Añadir al Carrito</a>
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
 
                     <div class="divider"></div>
                     <div class="section center-align">
-                        <button onClick="addToCart(<?php echo $id ?>)" class="waves-effect waves-light btn-small #d32f2f red darken-2"><i class="material-icons right">add_shopping_cart</i>Add To Cart</button>
+                        <button onClick="addToCart(<?php echo $id ?>)" class="waves-effect waves-light btn-small #d32f2f red darken-2"><i class="material-icons right">add_shopping_cart</i>Añadir al Carrito</button>
                     </div>
 
                 </div>

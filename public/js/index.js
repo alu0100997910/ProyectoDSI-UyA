@@ -86,11 +86,11 @@ function filter(){
                                 <span class="card-title">${res.items[i].name}<span class="new badge #1976d2 blue darken-2 price-tag bold" data-badge-caption="€">${res.items[i].price}</span></span>
                                     <p class="truncate">${res.items[i].desc}</p>
                                     <div class="center-align mt-15">
-                                        <a href="producto.php?id=${res.items[i].id}" class="waves-effect waves-light btn-small #1976d2 blue darken-2"><i class="material-icons right">info</i>Info</a>
+                                        <a href="producto.php?id=${res.items[i].id}" class="waves-effect waves-light btn-small #1976d2 blue darken-2"><i class="material-icons right">info</i>Información</a>
                                     </div>
                                 </div>
                             <div class="card-action center-align">
-                                <button onClick="addToCart(${res.items[i].id})" class="waves-effect waves-light btn-small #d32f2f red darken-2"><i class="material-icons right">add_shopping_cart</i>Add To Cart</button>
+                                <button onClick="addToCart(${res.items[i].id})" class="waves-effect waves-light btn-small #d32f2f red darken-2"><i class="material-icons right">add_shopping_cart</i>Añadir al Carrito</button>
                             </div>
                         </div>
                     </div>
