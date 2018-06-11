@@ -93,7 +93,7 @@
                 <div class="input-field col s12">
                   <i class="material-icons prefix">account_circle</i>
                   <input id="name" name="name" type="text" class="validate">
-                  <label for="name" data-error="wrong" data-success="right" class="form-text black-text">Nombre, usuario o telefono</label>
+                  <label for="name" data-error="wrong" data-success="right" class="form-text black-text">Nombre, usuario o teléfono</label>
                 </div>
                 <div class="input-field col s12">
                   <i class="material-icons prefix">email</i>
