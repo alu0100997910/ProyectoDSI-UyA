@@ -63,7 +63,7 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="section">
-            <h1>Categorias:</h1>
+            <h1>Categorías:</h1>
             <ol id="category" class="collection center-align">
               <li tabindex="0" class="collection-item black-text selected"  value=0>Todos</li>
               <li tabindex="0" class="collection-item black-text" value=1>Alimentos</li>
@@ -114,7 +114,7 @@
                   <li>
                     <img src="assets/img/alimentos.jpg" alt="perro saboreando pienso">
                     <div class="caption center-align">
-                      <h3>Las mejores ofertas en pienso, croquetas y demas!</h3>
+                      <h3>Las mejores ofertas en pienso, croquetas y demás!</h3>
                     </div>
                   </li>
                   <li>
