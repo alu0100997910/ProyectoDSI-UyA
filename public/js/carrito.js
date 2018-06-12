@@ -22,41 +22,6 @@ function getCart(){
     });
 }
 
-$( document ).ready(function() {
-    getCart();
-});
-
-$("#order").click(function(){
-    let params = {"pos":"order"}
-    $.ajax({
-        url: "/controllers/carrito.php",
-        type: "DELETE",
-        data: JSON.stringify(params),
-        dataType: 'json',
-        success: (res) => {
-            getCart().done(function(){
-                let alerta = `
-                <div class="card-panel #b2ff59 light-green accent-2 center-align">
-                    <span class="black-text">${res.message}</span>
-                </div>`;
-                $("#order-alert").html(alerta).removeAttr("hidden");
-            });
-        },
-        error: (res) => {
-            let alerta = `
-                <div class="card-panel #b71c1c red darken-4 center-align">
-                    <span class="white-text">${res.responseJSON.message}</span>
-                    <ul>
-                    `;
-            for(let i in res.responseJSON.products){
-                alerta += `<li class="white-text">${res.responseJSON.products[i]}</li>`;
-            }
-            alerta += `</ul></div>`;
-            $("#order-alert").html(alerta).removeAttr("hidden");
-        }
-    });
-});
-
 function addToCart(id){
     let params = {"id": id};
     $.ajax({
@@ -82,3 +47,39 @@ function removeFromCart(pos){
         }
     });
 }
+
+$( document ).ready(function() {
+    getCart();
+});
+
+$("#order").click(function(){
+    let params = {"pos":"order"}
+    $.ajax({
+        url: "/controllers/carrito.php",
+        type: "DELETE",
+        data: JSON.stringify(params),
+        dataType: 'json',
+        success: (res) => {
+            console.log(res);
+            getCart().done(function(){
+                let alerta = `
+                <div class="card-panel #b2ff59 light-green accent-2 center-align">
+                    <span class="black-text">${res.message}</span>
+                </div>`;
+                $("#order-alert").html(alerta).removeAttr("hidden");
+            });
+        },
+        error: (res) => {
+            let alerta = `
+                <div class="card-panel #b71c1c red darken-4 center-align">
+                    <span class="white-text">${res.responseJSON.message}</span>
+                    <ul>
+                    `;
+            for(let i in res.responseJSON.products){
+                alerta += `<li class="white-text">${res.responseJSON.products[i]}</li>`;
+            }
+            alerta += `</ul></div>`;
+            $("#order-alert").html(alerta).removeAttr("hidden");
+        }
+    });
+});

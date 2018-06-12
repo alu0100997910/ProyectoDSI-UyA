@@ -48,7 +48,7 @@
                 header("Access-Control-Allow-Origin: *");
                 header("Content-Type: application/json; charset=UTF-8");
                 $data = json_decode(file_get_contents("php://input"));
-                if($data->pos=="order"){
+                if($data->pos==="order"){
                     $db=new Database();
                     $product=new Product($db->getConnection());
                     $stockpro=[];
