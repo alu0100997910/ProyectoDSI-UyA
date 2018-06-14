@@ -84,26 +84,6 @@
             </ol>
           </div>
           <div class="divider"></div>
-          <div class="section">
-            <div class="card bg-721121">
-              <div class="card-content white-text">
-                <span class="card-title"> Descubre nuestras ofertas!</span>
-              </div>
-              <form id="boletin" class="bg-f15156 pb-15">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">account_circle</i>
-                  <input id="name" name="name" type="text" class="validate">
-                  <label for="name" data-error="wrong" data-success="right" class="form-text black-text">Nombre, usuario o teléfono</label>
-                </div>
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">email</i>
-                  <input id="email" type="email" name="email" class="validate">
-                  <label for="email" class="form-text black-text">Correo electrónico</label>
-                </div>
-                <button class="btn waves-effect waves-light #424242 grey darken-3" type="submit">Suscribirse</button>
-              </form>
-            </div>
-          </div>
         </div>
         <div class="col s12 m8">
           <div class="row">
